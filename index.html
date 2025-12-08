@@ -9,14 +9,24 @@
     <meta name="keywords" content="ADJ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Eigenes CSS (falls vorhanden) -->
     <link rel="stylesheet" href="feuille-de-style.css">
+
+    <!-- Google-Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        :root{
+            --green-main:#0ea574;
+            --green-dark:#0c6b3f;
+        }
+
         body{
             margin:0;
             font-family: Arial, Helvetica, sans-serif;
@@ -47,38 +57,65 @@
             font-weight:700;
         }
 
+        .menu-main li{
+            position:relative; /* nötig für Dropdown */
+        }
+
         .menu-main a{
             color:#222;
             text-decoration:none;
-            position:relative;
-            transition:color 0.2s ease;
-        }
-
-        /* Optionales Extra: animierter grüner Balken unter dem Link */
-        .menu-main a::after{
-            content:'';
-            position:absolute;
-            left:0;
-            bottom:-4px;
-            width:100%;
-            height:2px;
-            background:#0ea574;
-            transform:scaleX(0);
-            transform-origin:center;
-            transition:transform 0.2s ease;
+            font-family:'Montserrat', sans-serif;
+            transition:color 0.2s ease, transform 0.2s ease;
         }
 
         .menu-main a:hover{
-            color:#0ea574;              /* grün aufleuchten */
-            text-decoration:none;       /* kein Unterstreichen */
-        }
-
-        .menu-main a:hover::after{
-            transform:scaleX(1);        /* Balken fährt beim Hover aus */
+            color:var(--green-main);
+            text-decoration:none;      /* kein Unterstreichen */
+            transform:translateY(-1px);/* optionaler kleiner Hover-Effekt */
         }
 
         .burger{
             display:none;
+        }
+
+        /* -------- DROPDOWN -------- */
+        .submenu{
+            list-style:none;
+            margin:0;
+            padding:18px 0;
+            position:absolute;
+            left:50%;
+            transform:translateX(-50%) translateY(10px);
+            top:100%;
+            min-width:260px;
+            background:#ffffff;
+            border-radius:12px;
+            box-shadow:0 12px 35px rgba(0,0,0,0.18);
+            opacity:0;
+            pointer-events:none;
+            transition:opacity 0.18s ease, transform 0.18s ease;
+        }
+
+        .submenu li{
+            padding:10px 26px;
+        }
+
+        .submenu li a{
+            display:block;
+            width:100%;
+            color:#444;
+            font-weight:500;
+        }
+
+        .submenu li a:hover{
+            color:var(--green-dark);
+        }
+
+        /* Dropdown anzeigen bei Hover des Haupt-Items */
+        .has-sub:hover .submenu{
+            opacity:1;
+            pointer-events:auto;
+            transform:translateX(-50%) translateY(14px);
         }
 
         /* -------- HERO -------- */
@@ -86,8 +123,8 @@
             position:relative;
             max-width:1200px;
             margin:0 auto;
-            border-top:4px solid #0ea574;   /* grün wie Buttons */
-            border-bottom:4px solid #0ea574;
+            border-top:4px solid var(--green-main);   /* grün statt lila */
+            border-bottom:4px solid var(--green-main);
         }
 
         .hero h1{
@@ -96,18 +133,18 @@
             left:50%;
             transform:translate(-50%, -50%);
             margin:0;
-        
+
             font-family:'Montserrat', sans-serif;
             font-size:4.8rem;
             font-weight:800;
             letter-spacing:4px;
             text-transform:uppercase;
-        
+
             color:#ffffff;
             text-shadow:
                 0 3px 10px rgba(0,0,0,0.35),
                 0 8px 30px rgba(0,0,0,0.45);
-        
+
             z-index:5;
         }
 
@@ -132,21 +169,21 @@
             transform:translateY(-50%);
         }
 
-        /* -------- TITEL FÜR BEIDE H2 (Bienvenue! & A propos) -------- */
+        /* -------- TITEL FÜR H2 -------- */
         .welcome-section h2,
         main h2{
             margin-top:0;
             margin-bottom:20px;
             font-size:2.5rem;
-            color:#0c6b3f;
+            color:var(--green-dark);
             font-weight:800;
-            font-family:'Montserrat', sans-serif; /* gleiche Schrift wie Parisportif */
+            font-family:'Montserrat', sans-serif;  /* gleiche Schrift wie Parisportif */
         }
 
         /* -------- WELCOME / BIENVENUE -------- */
         .welcome-section{
             max-width:1200px;
-            margin:0 auto 0;      /* kein grauer Streifen nach unten */
+            margin:0 auto 0;          /* kein grauer Streifen nach unten */
             background:#ffffff;
             padding:40px 60px 60px;
         }
@@ -164,7 +201,7 @@
         }
 
         .btn-pill{
-            background:#0ea574;
+            background:var(--green-main);
             border:none;
             border-radius:999px;
             padding:15px 45px;
@@ -175,15 +212,15 @@
 
         .btn-pill:hover,
         .btn-pill:focus{
-            background:#0c825c;
+            background:var(--green-dark);
             color:#ffffff;
         }
 
         /* -------- A PROPOS / REST -------- */
         main{
             max-width:1200px;
-            margin:0 auto 60px;      /* oben 0, unten 60px */
-            padding:0 60px 0;
+            margin:0 auto 60px;
+            padding:40px 60px 0;
             background:#ffffff;
         }
 
@@ -219,7 +256,7 @@
         }
 
         .footer-content h4{
-            font-size:0.8rem;   /* kleinerer Text im Footer */
+            font-size:0.8rem;   /* etwas kleiner */
             margin-top:10px;
         }
     </style>
@@ -235,10 +272,20 @@
 
                 <li class="has-sub">
                     <a href="sport.html">Faire du sport en plein air</a>
+                    <ul class="submenu">
+                        <li><a href="tennis.html">Tennis</a></li>
+                        <li><a href="running.html">Running</a></li>
+                        <li><a href="basket.html">Basket</a></li>
+                    </ul>
                 </li>
 
                 <li class="has-sub">
                     <a href="equipements.html">S'équiper</a>
+                    <ul class="submenu">
+                        <li><a href="selection-ete.html">Notre sélection été</a></li>
+                        <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
+                        <li><a href="astuces.html">Astuces</a></li>
+                    </ul>
                 </li>
 
                 <li><a href="sources.html">Sources</a></li>
@@ -302,7 +349,7 @@
         </div>
     </section>
 
-    <!-- RESTLICHER INHALT -->
+    <!-- A PROPOS -->
     <main>
         <h2>A propos</h2>
         <p>
