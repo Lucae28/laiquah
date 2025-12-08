@@ -1,5 +1,6 @@
 /* =========================
-   HERO – Tennis-Seite
+   HERO – oberer Block
+   (gleicher Look wie Sport-Seite)
 ========================= */
 
 .hero{
@@ -27,7 +28,9 @@
 }
 
 /* =========================
-   INTRO + BILD (welcome-section)
+   BLOCK "Bien débuter sur le court"
+   (.welcome-section – wie ein weiterer Karten-Block,
+   vom Stil her ähnlich wie .map-section / .sport-links)
 ========================= */
 
 .welcome-section{
@@ -38,9 +41,9 @@
 }
 
 .welcome-section h2{
-    font-size: 2.2rem;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
     color: #0c6b3f;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
@@ -57,20 +60,21 @@
 }
 
 .welcome-section img{
-    max-width: 700px;
-    width: 100%;
-    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
 
 .welcome-section figcaption{
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 1.3rem;
     font-style: italic;
     color: #555;
 }
 
 /* =========================
-   HAUPT-INHALT (main)
+   HAUPTINHALT + GLOSSAR
+   (Main-Block, gleiches „Karten“-Layout)
 ========================= */
 
 main{
@@ -88,6 +92,14 @@ main h2{
     font-family: 'Montserrat', sans-serif;
 }
 
+main h3{
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #0c6b3f;
+    font-family: 'Montserrat', sans-serif;
+}
+
 main p{
     font-size: 1.6rem;
     line-height: 1.8;
@@ -97,22 +109,17 @@ main p{
 main a{
     color: #0ea574;
     font-weight: 600;
+    text-decoration: none;
 }
 
-/* =========================
-   GLOSSAIRE (im main)
-========================= */
-
-main h3{
-    font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    color: #0c6b3f;
-    font-family: 'Montserrat', sans-serif;
+main a:hover,
+main a:focus{
+    text-decoration: underline;
 }
 
+/* Glossar (dl, dt, dd) */
 main dl{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 main dt{
@@ -137,9 +144,5 @@ main dd{
     .welcome-section,
     main{
         padding: 25px 20px 30px;
-    }
-
-    .welcome-section img{
-        max-width: 100%;
     }
 }
