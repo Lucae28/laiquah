@@ -5,6 +5,7 @@
     --color-heading: #0c6b3f;
     --color-text: #222222;
     --content-width: 1200px;
+    --header-height: 80px;
 }
 
 body{
