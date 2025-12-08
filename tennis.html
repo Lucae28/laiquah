@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Tennis</title>
+
+    <meta name="author" content="Laurence Cusin-Masset et Laiquah Pandore">
+    <meta name="description" content="Débutant en tennis, apprenez à jouer et découvrez les règles de base du sport">
+    <meta name="keywords" content="tennis, jouer, balle de tennis, terrains">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap wie auf der Startseite -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- eigene CSS-Datei (falls du dort noch extra Sachen hast) -->
+    <link rel="stylesheet" href="feuille-de-style.css">
+
+    <!-- Fonts wie auf der Startseite -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f3f5f7;
+        }
+
+        /* -------- NAV -------- */
+        header{
+            background:#ffffff;
+            box-shadow:0 2px 4px rgba(0,0,0,0.05);
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        .menu{
+            max-width:1200px;
+            margin:0 auto;
+        }
+
+        .menu-main{
+            list-style:none;
+            padding:15px 0;
+            margin:0;
+            display:flex;
+            justify-content:center;
+            gap:80px;
+            font-weight:700;
+        }
+
+        .menu-main li{
+            position:relative; /* wichtig für Dropdown */
+        }
+
+        .menu-main a{
+            color:#222;
+            text-decoration:none;
+            font-family:'Montserrat', sans-serif;
+            transition:color 0.15s ease;
+        }
+
+        /* Hover NUR grün, KEIN Schatten mehr */
+        .menu-main a:hover{
+            color:#0ea574;
+        }
+
+        .burger{
+            display:none;
+        }
+
+        /* -------- DROPDOWN -------- */
+        .submenu{
+            position:absolute;
+            top:100%;
+            left:50%;
+            transform:translate(-50%, 10px);
+            list-style:none;
+            padding:20px 35px;
+            margin:0;
+            background:#ffffff;
+            border-radius:14px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.12);
+            min-width:260px;
+            opacity:0;
+            visibility:hidden;
+            pointer-events:none;
+            transition:opacity 0.18s ease, transform 0.18s ease;
+        }
+
+        .submenu li{
+            margin:10px 0;
+        }
+
+        .submenu a{
+            display:block;
+            font-weight:600;
+            color:#333;
+            text-decoration:none;
+        }
+
+        .submenu a:hover{
+            color:#0ea574;
+        }
+
+        .has-sub:hover .submenu{
+            opacity:1;
+            visibility:visible;
+            pointer-events:auto;
+            transform:translate(-50%, 16px);
+        }
+
+        /* -------- HERO (angepasst für Tennis-Seite) -------- */
+        .hero{
+            max-width:1200px;
+            margin:0 auto 40px;
+            background:#ffffff;
+            padding:40px 60px;
+            border-top:4px solid #0ea574;
+            border-bottom:4px solid #0ea574;
+        }
+
+        .hero h1{
+            margin-top:0;
+            margin-bottom:20px;
+            font-family:'Montserrat', sans-serif;
+            font-size:2.8rem;
+            font-weight:800;
+            color:#0c6b3f;
+            text-transform:none;
+            letter-spacing:1px;
+        }
+
+        .hero p{
+            font-size:1.8rem;
+            line-height:1.8;
+        }
+
+        /* -------- TITEL FÜR H2 -------- */
+        .welcome-section h2,
+        main h2{
+            margin-top:0;
+            margin-bottom:20px;
+            font-size:2.5rem;
+            color:#0c6b3f;
+            font-weight:800;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        /* -------- CONTENT-BLOCK 1 (wie Bienvenue) -------- */
+        .welcome-section{
+            max-width:1200px;
+            margin:0 auto 40px;
+            background:#ffffff;
+            padding:40px 60px 60px;
+        }
+
+        .welcome-section p{
+            font-size:1.8rem;
+            line-height:1.8;
+        }
+
+        .welcome-section figure{
+            margin:30px auto 0;
+            text-align:center;
+        }
+
+        .welcome-section img{
+            max-width:100%;
+            height:auto;
+            border-radius:6px;
+        }
+
+        .welcome-section figcaption{
+            margin-top:10px;
+            font-size:0.95rem;
+            font-style:italic;
+            color:#555;
+        }
+
+        /* -------- RESTLICHER INHALT -------- */
+        main{
+            max-width:1200px;
+            margin:0 auto 60px;
+            padding:40px 60px 60px;
+            background:#ffffff;
+        }
+
+        main p{
+            font-size:1.8rem;
+            line-height:1.8;
+        }
+
+        main h3{
+            font-size:2rem;
+            margin-top:30px;
+            margin-bottom:10px;
+            font-family:'Montserrat', sans-serif;
+            color:#0c6b3f;
+        }
+
+        dl{
+            margin-top:10px;
+        }
+
+        dt{
+            font-weight:700;
+            margin-top:18px;
+        }
+
+        dd{
+            margin-left:0;
+            margin-bottom:5px;
+        }
+
+        /* -------- FOOTER -------- */
+        .footer{
+            background:#222;
+            color:#ffffff;
+            padding:20px 0;
+            margin-top:40px;
+        }
+
+        .footer-content{
+            max-width:1200px;
+            margin:0 auto;
+            text-align:center;
+        }
+
+        .footer-content a{
+            color:#a5ffd4;
+            margin:0 10px;
+        }
+
+        .footer-content h4{
+            font-size:0.8rem;
+            margin-top:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="menu-header">
+            <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="menu" id="menu-principal">
+            <ul class="menu-main">
+                <li><a href="index.html">Accueil</a></li>
+
+                <li class="has-sub">
+                    <a href="sport.html">Faire du sport en plein air</a>
+                    <ul class="submenu">
+                        <li><a href="tennis.html">Tennis</a></li>
+                        <li><a href="running.html">Running</a></li>
+                        <li><a href="basket.html">Basket</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-sub">
+                    <a href="equipements.html">S'équiper</a>
+                    <ul class="submenu">
+                        <li><a href="selection-ete.html">Notre sélection été</a></li>
+                        <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
+                        <li><a href="astuces.html">Astuces</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO (Titel + Einleitung) -->
+    <section class="hero">
+        <h1>Le vocabulaire essentiel du tennis pour bien débuter</h1>
+        <p>
+            Vous entendez parler d’ace, de tie-break, de slice ou de break… mais késako ?
+            Que vous commenciez le tennis ou que vous souhaitiez enfin comprendre ce que racontent les commentateurs lors des matchs,
+            ce guide vous explique simplement les termes essentiels du jeu. Entre notions de base, techniques incontournables et références
+            à des joueurs français célèbres, vous découvrirez tout le vocabulaire nécessaire pour apprécier vos premiers échanges sur le court.
+        </p>
+    </section>
+
+    <!-- INTRO + FOTO in weißer Box (wie Bienvenue) -->
+    <section class="welcome-section">
+        <h2>Bien débuter sur le court</h2>
+
+        <p>
+            Pour bien débuter le tennis, il est essentiel de se familiariser avec les règles du jeu et son vocabulaire spécifique.
+            Chaque échange, chaque <em><a href="#service">service</a></em>, chaque <em><a href="#let">let</a></em> ou
+            <em><a href="#faute-directe">faute directe</a></em> participe à la dynamique d’un match.
+            Les débutants peuvent s’inspirer du style athlétique de
+            <strong><a href="#Jo-Wilfried-Tsonga">Jo-Wilfried Tsonga</a></strong>,
+            du toucher de balle de <strong><a href="#Yannick-Noah">Yannick Noah</a></strong>,
+            ou de la précision d’<strong><a href="#Amelie-Mauresmo">Amélie Mauresmo</a></strong>,
+            tous professionnels et maîtres de leur discipline.
+        </p>
+
+        <figure>
+            <img src="image/TennisMenu.jpg" alt="Tennis">
+            <figcaption>
+                <em>Légende : Une fille qui joue au tennis avec son coéquipier (Crédits : photo libre de droit)</em>
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- CORPS DU TEXTE -->
+    <main>
+        <h2 id="Comprendrelesfondamentauxdutennis">Comprendre les fondamentaux du tennis</h2>
+
+        <p>
+            Pour bien débuter le tennis, il est essentiel de comprendre non seulement les règles, mais aussi le vocabulaire
+            qui accompagne chaque échange. Les termes utilisés par les joueurs et les commentateurs décrivent des situations
+            de jeu précises et permettent d’analyser un match avec plus de finesse.
+        </p>
+
+        <h2>Le lexique indispensable pour progresser</h2>
+
+        <p>
+            Apprendre les termes techniques du tennis permet de mieux comprendre le déroulement d’un match et d’identifier
+            les choix tactiques des joueurs. Par exemple, reconnaître un <em><a href="#ace">ace</a></em>, un service gagnant
+            imparable, ou un <em><a href="#unpassingshot">passing shot</a></em> réalisé pour contrer un adversaire monté au filet,
+            aide à analyser la construction d’un point. Les situations tendues, comme un <em><a href="#tie-break">tie-break</a></em>,
+            rendent ce vocabulaire encore plus utile pour saisir l’enjeu de chaque instant.
+        </p>
+
+        <p>
+            Les champions français comme <strong><a href="#Caroline-Garcia">Caroline Garcia</a></strong>,
+            experte du jeu agressif, ou <strong><a href="#Gael-Monfils">Gaël Monfils</a></strong>,
+            maître des échanges spectaculaires et des <em><a href="#lobs">lobs</a></em> défensifs,
+            illustrent parfaitement l'utilisation de ces coups. Maîtriser ces mots, c’est donc comprendre non seulement la technique,
+            mais aussi l’intelligence de jeu propre à chaque joueur professionnel.
+        </p>
+
+        <!-- GLOSSAIRE -->
+        <h3>Glossaire</h3>
+
+        <dl>
+            <dt id="service">Service</dt>
+            <dd>Coup technique par excellence au tennis, le service lance le début du match, mais c'est aussi une opportunité de marquer le point.</dd>
+
+            <dt id="let">Let</dt>
+            <dd>Lorsque la balle touche le filet sur un service mais tombe dans le bon carré. Le service est alors rejoué.</dd>
+
+            <dt id="faute-directe">Faute directe</dt>
+            <dd>Erreur commise par un joueur sans pression particulière de l’adversaire.</dd>
+
+            <dt id="Jo-Wilfried-Tsonga">Jo-Wilfried Tsonga</dt>
+            <dd>Joueur explosif connu pour son service puissant et son style offensif. Finaliste de l’Open d’Australie en 2008 et ancien membre du Top 5 mondial.</dd>
+
+            <dt id="Yannick-Noah">Yannick Noah</dt>
+            <dd>Vainqueur de Roland-Garros en 1983, dernier Français sacré en simple dans un tournoi du Grand Chelem. Connu pour son charisme et son style athlétique.</dd>
+
+            <dt id="Amelie-Mauresmo">Amélie Mauresmo</dt>
+            <dd>Ancienne n°1 mondiale, victorieuse de l’Open d’Australie et de Wimbledon en 2006. Reconnue pour son élégance de jeu et son revers puissant.</dd>
+
+            <dt id="ace">Ace</dt>
+            <dd>Service gagnant que l’adversaire ne touche pas. C’est l’un des coups les plus spectaculaires, souvent associé à des joueurs puissants.</dd>
+
+            <dt id="unpassingshot">Passing-shot</dt>
+            <dd>Coup gagnant frappé lorsque l’adversaire est monté au filet, la balle passant à côté de lui ou au-dessus.</dd>
+
+            <dt id="tie-break">Tie-break</dt>
+            <dd>Jeu décisif utilisé pour départager les joueurs à 6-6 dans un set (sauf règles particulières en Grand Chelem).</dd>
+
+            <dt id="Caroline-Garcia">Caroline Garcia</dt>
+            <dd>Joueuse française spécialiste du jeu agressif. Plusieurs titres WTA, notamment en 2022 avec une saison exceptionnelle couronnée par une victoire au Masters.</dd>
+
+            <dt id="Gael-Monfils">Gaël Monfils</dt>
+            <dd>
+                Joueur français spectaculaire, apprécié pour son sens du show et ses capacités athlétiques hors normes.
+                Demi-finaliste à Roland-Garros en 2008 et plusieurs fois membre du Top 10 mondial, il est connu pour ses
+                glissades impressionnantes, ses points défensifs incroyables, ses passing-shots décisifs et sa capacité à
+                retourner des situations compliquées.
+            </dd>
+        </dl>
+
+        <p>
+            Revenir aux <a href="#Comprendrelesfondamentauxdutennis">fondamentaux du tennis</a>.
+        </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="mailto:laurence.cusin-masset@etu.uni-paris1.fr?subject=Question%20sur%20le%20site%20internet">
+                Nous contacter par mail
+            </a>
+
+            <a href="mentions-legales.html">Mentions légales</a>
+
+            <h4>&copy; Laiquah Pandore et Laurence Cusin Masset — Tous droits réservés — 2025</h4>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS (wie auf den anderen Seiten) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        const burger = document.getElementById("burger");
+        const menuList = document.querySelector(".menu-main");
+        const subMenus = document.querySelectorAll(".has-sub");
+
+        // Ouvrir / fermer le menu principal (mobile)
+        if (burger) {
+            burger.addEventListener("click", () => {
+                const isOpen = menuList.classList.toggle("active");
+                burger.classList.toggle("open", isOpen);
+                burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+        }
+
+        // Ouvrir / fermer les sous-menus uniquement sur mobile
+        subMenus.forEach(item => {
+            const link = item.querySelector("a");
+
+            link.addEventListener("click", (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    item.classList.toggle("open");
+                    const submenu = item.querySelector(".submenu");
+                    submenu.classList.toggle("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
