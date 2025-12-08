@@ -1,5 +1,5 @@
-/* -------- HERO -------- */
-.hero {
+/* ===== HERO (Slider oben) ===== */
+.hero{
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -7,7 +7,7 @@
     border-bottom: 4px solid #0ea574;
 }
 
-.hero h1 {
+.hero h1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,30 +28,30 @@
     z-index: 5;
 }
 
-.hero-carousel .item img {
+.hero-carousel .item img{
     width: 100%;
-    height: 360px;      /* hier kannst du kleiner stellen, z.B. 260px */
+    height: 360px;      /* wieder wie vorher: nicht zu hoch */
     object-fit: cover;
 }
 
-#myCarousel .carousel-indicators {
+#myCarousel .carousel-indicators{
     bottom: 10px;
 }
 
-#myCarousel .carousel-control {
+#myCarousel .carousel-control{
     background: transparent;
     width: 8%;
 }
 
-#myCarousel .glyphicon {
+#myCarousel .glyphicon{
     font-size: 40px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* -------- TITEL (Bienvenue & A propos) -------- */
+/* ===== ÜBERSCHRIFTEN IN WELCOME + MAIN ===== */
 .welcome-section h2,
-main h2 {
+main h2{
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 2.5rem;
@@ -60,27 +60,27 @@ main h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* -------- WELCOME / BIENVENUE -------- */
-.welcome-section {
+/* ===== WELCOME / BIENVENUE ===== */
+.welcome-section{
     max-width: 1200px;
     margin: 0 auto 0;
     background: #ffffff;
     padding: 40px 60px 60px;
 }
 
-.welcome-section p {
+.welcome-section p{
     font-size: 2.0rem;
     line-height: 1.8;
 }
 
-.welcome-buttons {
+.welcome-buttons{
     margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 40px;
 }
 
-.btn-pill {
+.btn-pill{
     background: #0ea574;
     border: none;
     border-radius: 999px;
@@ -88,28 +88,30 @@ main h2 {
     font-size: 1.3rem;
     font-weight: 700;
     color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-pill:hover,
-.btn-pill:focus {
+.btn-pill:focus{
     background: #0c825c;
     color: #ffffff;
 }
 
-/* -------- A PROPOS / REST -------- */
-main {
+/* ===== A PROPOS / REST ===== */
+main{
     max-width: 1200px;
     margin: 0 auto 60px;
     padding: 0 60px 60px;
     background: #ffffff;
 }
 
-main p {
+main p{
     font-size: 2.0rem;
     line-height: 1.8;
 }
 
-main img {
+main img{
     max-width: 100%;
     height: auto;
     display: block;
