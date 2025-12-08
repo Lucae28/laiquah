@@ -2,6 +2,8 @@
     position:relative;
     max-width:1200px;
     margin:0 auto;
+    border-top:4px solid #0ea574;   /* grüner Rand */
+    border-bottom:4px solid #0ea574;/* grüner Rand */
     border-top:4px solid #0ea574;
     border-bottom:4px solid #0ea574;
 }
@@ -11,19 +13,42 @@
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
+    margin:0;
+
+    font-family:'Montserrat', sans-serif;
     font-size:4.8rem;
     font-weight:800;
     letter-spacing:4px;
+    text-transform:uppercase;
+
     color:#ffffff;
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.35),
+        0 8px 30px rgba(0,0,0,0.45);
+
+    z-index:5;
 }
 
-/* Carousel */
 .hero-carousel .item img{
     width:100%;
     height:360px;
     object-fit:cover;
 }
 
+#myCarousel .carousel-indicators{
+    bottom:10px;
+}
+
+#myCarousel .carousel-control{
+    background:transparent;
+    width:8%;
+}
+
+#myCarousel .glyphicon{
+    font-size:40px;
+    top:50%;
+    transform:translateY(-50%);
+}
 
 /* Welcome */
 .welcome-section{
