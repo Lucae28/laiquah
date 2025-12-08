@@ -9,19 +9,17 @@
     <meta name="keywords" content="tennis, jouer, balle de tennis, terrains">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Icon wie bei index.html -->
+    <!-- Icon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 
-    <!-- Bootstrap (für Grid etc.) -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- Gemeinsame CSS-Dateien -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-
-    <!-- Seiten-spezifisches CSS -->
     <link rel="stylesheet" href="css/tennis.css">
 
     <!-- Fonts -->
@@ -33,10 +31,10 @@
 
 <body>
 
-    <!-- NAVBAR wird per fetch geladen -->
+    <!-- NAVBAR -->
     <div id="navbar"></div>
 
-    <!-- HERO – wie sport-hero, nur für Tennis -->
+    <!-- HERO -->
     <section class="tennis-hero">
         <h1>Le vocabulaire essentiel du tennis pour bien débuter</h1>
         <p>
@@ -148,7 +146,7 @@
         </p>
     </main>
 
-    <!-- FOOTER wird per fetch geladen -->
+    <!-- FOOTER -->
     <div id="footer"></div>
 
     <!-- SCRIPTS -->
@@ -158,7 +156,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
-            // Navbar laden
+            // Navbar
             fetch("navbar.html")
                 .then(response => response.text())
                 .then(html => {
@@ -166,7 +164,7 @@
                 })
                 .catch(err => console.error("Fehler beim Laden der Navbar:", err));
 
-            // Footer laden
+            // Footer
             fetch("footer.html")
                 .then(response => response.text())
                 .then(html => {
