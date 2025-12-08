@@ -6,6 +6,8 @@
     --color-text: #222222;
     --content-width: 1200px;
     --header-height: 80px;
+    --box-radius: 14px;
+    --box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 body{
