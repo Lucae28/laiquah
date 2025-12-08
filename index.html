@@ -12,7 +12,6 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- eigene CSS -->
     <link rel="stylesheet" href="feuille-de-style.css">
 
     <!-- Fonts -->
@@ -53,7 +52,7 @@
         }
 
         .menu-main li{
-            position:relative; /* wichtig für Dropdown */
+            position:relative;
         }
 
         .menu-main a{
@@ -63,10 +62,10 @@
             transition:color 0.15s ease, text-shadow 0.15s ease;
         }
 
-        /* Hover-Effekt Navbar: grün leuchten, kein underline */
-        .menu-main a:hover{
+        .menu-main a:hover,
+        .menu-main a:focus{
             color:#0ea574;
-            text-shadow:0 0 8px rgba(14,165,116,0.5);
+            text-shadow:none;
         }
 
         .burger{
@@ -78,7 +77,7 @@
             position:absolute;
             top:100%;
             left:50%;
-            /* Start leicht nach oben (für die Animation), aber nicht nach unten */
+            
             transform:translate(-50%, -8px);
             list-style:none;
             padding:20px 35px;
@@ -108,12 +107,12 @@
             color:#0ea574;
         }
         
-        /* WICHTIG: sichtbar + klickbar, sobald Maus auf dem LI oder im Dropdown ist */
+        
         .has-sub:hover .submenu{
             opacity:1;
             visibility:visible;
             pointer-events:auto;
-            /* Sichtbarer Zustand: direkt unter dem Menüpunkt, kein „Luftspalt“ */
+            
             transform:translate(-50%, 0);
         }
 
@@ -122,8 +121,8 @@
             position:relative;
             max-width:1200px;
             margin:0 auto;
-            border-top:4px solid #0ea574;   /* grüner Rand */
-            border-bottom:4px solid #0ea574;/* grüner Rand */
+            border-top:4px solid #0ea574;
+            border-bottom:4px solid #0ea574;
         }
 
         .hero h1{
@@ -168,7 +167,6 @@
             transform:translateY(-50%);
         }
 
-        /* -------- TITEL FÜR BEIDE H2 (Bienvenue! & A propos) -------- */
         .welcome-section h2,
         main h2{
             margin-top:0;
@@ -176,13 +174,12 @@
             font-size:2.5rem;
             color:#0c6b3f;
             font-weight:800;
-            font-family:'Montserrat', sans-serif; /* gleiche Schrift wie Parisportif */
+            font-family:'Montserrat', sans-serif;
         }
 
-        /* -------- WELCOME / BIENVENUE -------- */
         .welcome-section{
             max-width:1200px;
-            margin:0 auto 0; /* kein grauer Streifen unten */
+            margin:0 auto 0;
             background:#ffffff;
             padding:40px 60px 60px;
         }
@@ -218,7 +215,7 @@
         /* -------- A PROPOS / REST -------- */
         main{
             max-width:1200px;
-            margin:0 auto 60px;   /* oben kein extra Abstand -> kein grauer Streifen */
+            margin:0 auto 60px;
             padding:0 60px 60px;
             background:#ffffff;
         }
@@ -255,7 +252,7 @@
         }
 
         .footer-content h4{
-            font-size:0.8rem; /* kleiner */
+            font-size:0.8rem;
             margin-top:10px;
         }
     </style>
