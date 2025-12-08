@@ -130,20 +130,24 @@
     </main>
 
     <!-- FOOTER -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById("footer").innerHTML = html;
-            })
-            .catch(err => console.error("Footer konnte nicht geladen werden:", err));
-    });
-    </script>
+    <div id="footer"></div>
 
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("footer.html")
+                .then(res => res.text())
+                .then(html => {
+                    const footerContainer = document.getElementById("footer");
+                    if (footerContainer) {
+                        footerContainer.innerHTML = html;
+                    }
+                })
+                .catch(err => console.error("Footer konnte nicht geladen werden:", err));
+        });
+    </script>
 </body>
 </html>
