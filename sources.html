@@ -29,76 +29,92 @@
 
 <body>
 
-    <!-- Navbar -->
-    <div id="navbar"></div>
+<!-- MENU -->
+<header>
+    <nav class="menu">
+        <ul class="menu-main">
+            <li><a href="index.html">Accueil</a></li>
 
-    <main class="sources-main">
-        <h1>Sources</h1>
+            <li class="has-sub">
+                <a href="sport.html">Faire du sport en plein air</a>
+                <ul class="submenu">
+                    <li><a href="tennis.html">Tennis</a></li>
+                    <li><a href="running.html">Running</a></li>
+                    <li><a href="basket.html">Basket</a></li>
+                </ul>
+            </li>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-            dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
-            massa, varius a, semper congue, euismod non, mi.
-        </p>
+            <li class="has-sub">
+                <a href="equipements.html">S'équiper</a>
+                <ul class="submenu">
+                    <li><a href="selection-ete.html">Notre sélection été</a></li>
+                    <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
+                    <li><a href="astuces.html">Astuces</a></li>
+                </ul>
+            </li>
 
-        <p>
-            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-            Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
-            Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
-        </p>
+            <li><a href="sources.html">Sources</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-            dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
-            massa, varius a, semper congue, euismod non, mi.
-        </p>
+<!-- CONTENU -->
+<main class="sources-main">
+    <h1>Sources</h1>
 
-        <p>
-            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-            Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
-            Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
-        </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
+        massa, varius a, semper congue, euismod non, mi.
+    </p>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-            dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
-            massa, varius a, semper congue, euismod non, mi.
-        </p>
+    <p>
+        Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+        Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
+        Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+    </p>
 
-        <p>
-            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-            Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
-            Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
-        </p>
-    </main>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
+        massa, varius a, semper congue, euismod non, mi.
+    </p>
 
-    <!-- Footer -->
-    <div id="footer"></div>
+    <p>
+        Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+        Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
+        Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+    </p>
 
-    <!-- SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
+        massa, varius a, semper congue, euismod non, mi.
+    </p>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
+    <p>
+        Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+        Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
+        Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+    </p>
+</main>
 
-            // Navbar
-            fetch("navbar.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("navbar").innerHTML = html;
-                })
-                .catch(err => console.error("Fehler beim Laden der Navbar:", err));
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <a href="mailto:laurence.cusin-masset@etu.uni-paris1.fr?subject=Question%20sur%20le%20site%20internet">
+            Nous contacter par mail
+        </a>
 
-            // Footer
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-                .catch(err => console.error("Fehler beim Laden des Footers:", err));
-        });
-    </script>
+        <a href="mentions-legales.html">Mentions légales</a>
+
+        <h4>&copy; Laiquah Pandore et Laurence Cusin Masset — Tous droits réservés — 2025</h4>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
