@@ -1,23 +1,19 @@
-main{
-    max-width: 1200px;
+.sources-content{
+    max-width: var(--content-width);
     margin: 60px auto;
     background: #ffffff;
     padding: 50px 60px;
 }
 
-main p{
-    font-size: 2rem;
-    line-height: 1.8;
+.sources-content h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--color-heading);
 }
 
-
-@media (max-width: 768px){
-    main{
-        margin: 30px auto;
-        padding: 30px 20px;
-    }
-
-    main p{
-        font-size: 1.6rem;
-    }
+.sources-content p{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
