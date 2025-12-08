@@ -9,10 +9,13 @@
     <meta name="keywords" content="ADJ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+    <!-- eigene CSS -->
     <link rel="stylesheet" href="feuille-de-style.css">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -75,7 +78,6 @@
             position:absolute;
             top:100%;
             left:50%;
-            
             transform:translate(-50%, -8px);
             list-style:none;
             padding:20px 35px;
@@ -105,12 +107,10 @@
             color:#0ea574;
         }
         
-        
         .has-sub:hover .submenu{
             opacity:1;
             visibility:visible;
             pointer-events:auto;
-            
             transform:translate(-50%, 0);
         }
 
@@ -258,34 +258,7 @@
 
 <body>
 
-    <!-- MENU -->
-    <header>
-        <nav class="menu" id="menu-principal">
-            <ul class="menu-main">
-                <li><a href="index.html">Accueil</a></li>
-
-                <li class="has-sub">
-                    <a href="sport.html">Faire du sport en plein air</a>
-                    <ul class="submenu">
-                        <li><a href="tennis.html">Tennis</a></li>
-                        <li><a href="running.html">Running</a></li>
-                        <li><a href="basket.html">Basket</a></li>
-                    </ul>
-                </li>
-
-                <li class="has-sub">
-                    <a href="equipements.html">S'équiper</a>
-                    <ul class="submenu">
-                        <li><a href="selection-ete.html">Notre sélection été</a></li>
-                        <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
-                        <li><a href="astuces.html">Astuces</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="sources.html">Sources</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="navbar"></div>
 
     <!-- HERO -->
     <section class="hero">
@@ -356,22 +329,29 @@
         <img src="image/TennisMenu.jpg" alt="Tennis">
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <a href="mailto:laurence.cusin-masset@etu.uni-paris1.fr?subject=Question%20sur%20le%20site%20internet">
-                Nous contacter par mail
-            </a>
+    <div id="footer"></div>
 
-            <a href="mentions-legales.html">Mentions légales</a>
-
-            <h4>&copy; Laiquah Pandore et Laurence Cusin Masset — Tous droits réservés — 2025</h4>
-        </div>
-    </footer>
-
-    <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("navbar").innerHTML = html;
+                })
+                .catch(err => console.error("Fehler beim Laden der Navbar:", err));
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+                .catch(err => console.error("Fehler beim Laden des Footers:", err));
+        });
+    </script>
 
 </body>
 </html>
