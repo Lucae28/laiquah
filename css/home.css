@@ -1,4 +1,3 @@
-/* ===== HERO (Slider oben) ===== */
 .hero{
     position: relative;
     max-width: 1200px;
@@ -30,7 +29,7 @@
 
 .hero-carousel .item img{
     width: 100%;
-    height: 360px;      /* wieder wie vorher: nicht zu hoch */
+    height: 360px;
     object-fit: cover;
 }
 
@@ -49,7 +48,7 @@
     transform: translateY(-50%);
 }
 
-/* ===== ÜBERSCHRIFTEN IN WELCOME + MAIN ===== */
+/* ===== WELCOME + MAIN ===== */
 .welcome-section h2,
 main h2{
     margin-top: 0;
