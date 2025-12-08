@@ -11,7 +11,7 @@
 
     <!-- Icon (falls vorhanden) -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap (wie auf Index) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -162,3 +162,22 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Navbar laden
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("navbar").innerHTML = html;
+                })
+                .catch(err => console.error("Fehler beim Laden der Navbar:", err));
+
+            // Footer laden
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+                .catch(err => console.error("Fehler beim Laden des Footers:", err));
+        });
+    </script>
+
+</body>
+</html>
