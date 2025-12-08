@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
     <meta charset="utf-8">
     <title>Sources</title>
 
     <meta name="author" content="Laurence Cusin-Masset et Laiquah Pandore">
+    <meta name="description" content="Sources et références utilisées pour le site Parisportif.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Icon -->
@@ -14,7 +15,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- CSS (gleiche Reihenfolge wie basket.html) -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -28,23 +29,52 @@
 
 <body>
 
-<main class="sources-content">
-    <h1>Sources</h1>
+    <!-- Navbar -->
+    <div id="navbar"></div>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-        Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
-    </p>
+    <main class="sources-main">
+        <h1>Sources</h1>
 
-    <p>
-        Proin porttitor, orci nec nonummy molestie, enim est eleifend mi,
-        non fermentum diam nisl sit amet erat. Duis semper.
-    </p>
-</main>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+            dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
+            massa, varius a, semper congue, euismod non, mi.
+        </p>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <p>
+            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+            Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
+            Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+        </p>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Navbar
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("navbar").innerHTML = html;
+                })
+                .catch(err => console.error("Fehler beim Laden der Navbar:", err));
+
+            // Footer
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+                .catch(err => console.error("Fehler beim Laden des Footers:", err));
+        });
+    </script>
 
 </body>
 </html>
