@@ -29,6 +29,7 @@
         }
 
         /* -------- NAV -------- */
+        /* -------- NAV -------- */
         header{
             background:#ffffff;
             box-shadow:0 2px 4px rgba(0,0,0,0.05);
@@ -53,24 +54,26 @@
         }
 
         .menu-main li{
-            position:relative; /* wichtig für Dropdown */
+            position:relative;
         }
 
         .menu-main a{
             color:#222;
             text-decoration:none;
             font-family:'Montserrat', sans-serif;
-            transition:color 0.15s ease;
+            transition:color 0.15s ease, text-shadow 0.15s ease;
         }
 
-        /* Hover: nur grün, KEIN Schatten mehr */
-        .menu-main a:hover{
+        .menu-main a:hover,
+        .menu-main a:focus{
             color:#0ea574;
+            text-shadow:none;
         }
 
         .burger{
-            display:none; /* auf dieser Seite kein Burger-Menü */
+            display:none;
         }
+
 
         /* -------- DROPDOWN -------- */
         .submenu{
