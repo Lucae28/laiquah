@@ -9,109 +9,133 @@
     <meta name="keywords" content="sport plein air Paris, tennis, running, basket, parcs, terrains">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Icon (optional, wie bei index.html) -->
+    <!-- Icon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 
-    <!-- Bootstrap (falls du es global nutzen willst) -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- Gemeinsame CSS-Dateien -->
+    <!-- CSS – gleiche Reihenfolge wie basket.html -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-
-    <!-- Seiten-spezifische CSS für sport.html -->
     <link rel="stylesheet" href="css/sport.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navbar wird per fetch geladen -->
-    <div id="navbar"></div>
+<!-- MENU -->
+<header>
+    <nav class="menu">
+        <ul class="menu-main">
+            <li><a href="index.html">Accueil</a></li>
 
-    <!-- HERO (Text-Block, kein Slider) -->
-    <section class="sport-hero">
-        <h1>Faire du sport en plein air à Paris</h1>
-        <p>Découvrez les meilleurs lieux pour courir, jouer au tennis ou au basket, et équipez-vous pour profiter pleinement du plein air.</p>
-    </section>
+            <li class="has-sub">
+                <a href="sport.html">Faire du sport en plein air</a>
+                <ul class="submenu">
+                    <li><a href="tennis.html">Tennis</a></li>
+                    <li><a href="running.html">Running</a></li>
+                    <li><a href="basket.html">Basket</a></li>
+                </ul>
+            </li>
 
-    <!-- CARTE -->
-    <section class="map-section">
-        <h2>Carte interactive des lieux</h2>
-        <iframe
-            title="Carte des lieux pour faire du sport en plein air à Paris"
-            src="https://www.google.com/maps/d/embed?mid=1dE0VjLq6B2FMIXfa11g2IpUoX3H8Q1U&ehbc=2E312F&noprof=1"
-            loading="lazy">
-        </iframe>
-        <p>Parcourez les terrains et parcs de Paris pour pratiquer votre sport préféré en plein air.</p>
-        <p>Pour vous simplifier la tâche, nous avons regroupé pour vous tous les endroits où faire du sport :
-            terrains de tennis, terrains de basket et parcs à Paris pour aller courir. Vous retrouverez dans cette
-            carte faite sur mesure l’endroit le plus proche de chez vous pour vous défouler ! Amateurs ou professionnels,
-            vous n’avez plus d’excuses pour louper votre séance de sport.</p>
-        <article>
-            <p>Vous êtes plutôt raquette de tennis, ballon de basket ou vous préférez enfiler votre plus
-            belle paire de chaussures pour aller courir ? Quelles que soient vos préférences, vous retrouverez dans
-            cette page toutes les informations vous permettant de faire du sport à Paris, en plein air.</p>
-        </article>
-    </section>
+            <li class="has-sub">
+                <a href="equipements.html">S'équiper</a>
+                <ul class="submenu">
+                    <li><a href="selection-ete.html">Notre sélection été</a></li>
+                    <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
+                    <li><a href="astuces.html">Astuces</a></li>
+                </ul>
+            </li>
 
-    <!-- BUTTONS / LIENS VERS LES PAGES SPORT -->
-    <section class="sport-links">
-        <div class="sport-links-grid">
-            <div class="sport-card">
-                <h2>Tennis</h2>
-                <p>Pour en savoir plus sur le tennis.</p>
-                <a href="tennis.html" class="btn-pill">Je découvre le tennis</a>
-            </div>
+            <li><a href="sources.html">Sources</a></li>
+        </ul>
+    </nav>
+</header>
 
-            <div class="sport-card">
-                <h2>Running</h2>
-                <p>Découvrez des conseils et itinéraires pour courir à Paris.</p>
-                <a href="running.html" class="btn-pill">Je découvre le running</a>
-            </div>
+<!-- HERO -->
+<section class="sport-hero">
+    <h1>Faire du sport en plein air à Paris</h1>
+    <p>
+        Découvrez les meilleurs lieux pour courir, jouer au tennis ou au basket,
+        et équipez-vous pour profiter pleinement du plein air.
+    </p>
+</section>
 
-            <div class="sport-card">
-                <h2>Basket</h2>
-                <p>Pour en savoir plus sur le basket et améliorer vos tirs.</p>
-                <a href="basket.html" class="btn-pill">Je découvre le basket</a>
-            </div>
+<!-- CARTE -->
+<section class="map-section">
+    <h2>Carte interactive des lieux</h2>
+    <iframe
+        title="Carte des lieux pour faire du sport en plein air à Paris"
+        src="https://www.google.com/maps/d/embed?mid=1dE0VjLq6B2FMIXfa11g2IpUoX3H8Q1U&ehbc=2E312F&noprof=1"
+        loading="lazy">
+    </iframe>
+
+    <p>
+        Parcourez les terrains et parcs de Paris pour pratiquer votre sport préféré en plein air.
+    </p>
+
+    <p>
+        Pour vous simplifier la tâche, nous avons regroupé pour vous tous les endroits où faire du sport :
+        terrains de tennis, terrains de basket et parcs à Paris pour aller courir.
+        Vous retrouverez l’endroit le plus proche de chez vous pour vous défouler.
+    </p>
+
+    <article>
+        <p>
+            Vous êtes plutôt raquette de tennis, ballon de basket ou chaussures de running ?
+            Cette page rassemble toutes les informations nécessaires pour faire du sport à Paris,
+            en plein air.
+        </p>
+    </article>
+</section>
+
+<!-- LIENS VERS LES SPORTS -->
+<section class="sport-links">
+    <div class="sport-links-grid">
+
+        <div class="sport-card">
+            <h2>Tennis</h2>
+            <p>Pour en savoir plus sur le tennis.</p>
+            <a href="tennis.html" class="btn-pill">Je découvre le tennis</a>
         </div>
-    </section>
 
-    <!-- Footer wird per fetch geladen -->
-    <div id="footer"></div>
+        <div class="sport-card">
+            <h2>Running</h2>
+            <p>Découvrez des conseils et itinéraires pour courir à Paris.</p>
+            <a href="running.html" class="btn-pill">Je découvre le running</a>
+        </div>
 
-    <!-- SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <div class="sport-card">
+            <h2>Basket</h2>
+            <p>Pour en savoir plus sur le basket et améliorer vos tirs.</p>
+            <a href="basket.html" class="btn-pill">Je découvre le basket</a>
+        </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
+    </div>
+</section>
 
-            // Navbar laden
-            fetch("navbar.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("navbar").innerHTML = html;
-                })
-                .catch(err => console.error("Fehler beim Laden der Navbar:", err));
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <a href="mailto:laurence.cusin-masset@etu.uni-paris1.fr?subject=Question%20sur%20le%20site%20internet">
+            Nous contacter par mail
+        </a>
 
-            // Footer laden
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("footer").innerHTML = html;
-                })
-                .catch(err => console.error("Fehler beim Laden des Footers:", err));
-        });
-    </script>
+        <a href="mentions-legales.html">Mentions légales</a>
+
+        <h4>&copy; Laiquah Pandore et Laurence Cusin Masset — Tous droits réservés — 2025</h4>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
