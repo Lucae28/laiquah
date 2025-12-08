@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Faire du sport en plein air à Paris</title>
+
+    <meta name="author" content="Laurence Cusin-Masset et Laiquah Pandore">
+    <meta name="description" content="Découvrez où courir, jouer au tennis ou au basket en plein air à Paris grâce à notre carte interactive et nos conseils pratiques.">
+    <meta name="keywords" content="sport plein air Paris, tennis, running, basket, parcs, terrains">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- eigene CSS (falls du noch etwas extern hast) -->
+    <link rel="stylesheet" href="feuille-de-style.css">
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f3f5f7;
+        }
+
+        /* -------- NAV -------- */
+        header{
+            background:#ffffff;
+            box-shadow:0 2px 4px rgba(0,0,0,0.05);
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        .menu{
+            max-width:1200px;
+            margin:0 auto;
+        }
+
+        .menu-header{
+            display:none; /* Burger nur falls du ihn brauchst, hier ausgeblendet für Desktop */
+        }
+
+        .menu-main{
+            list-style:none;
+            padding:15px 0;
+            margin:0;
+            display:flex;
+            justify-content:center;
+            gap:80px;
+            font-weight:700;
+        }
+
+        .menu-main li{
+            position:relative;
+        }
+
+        .menu-main a{
+            color:#222;
+            text-decoration:none;
+            font-family:'Montserrat', sans-serif;
+            transition:color 0.15s ease;
+        }
+
+        /* Hover: nur grün, KEIN Schatten */
+        .menu-main a:hover{
+            color:#0ea574;
+        }
+
+        .burger{
+            display:none;
+        }
+
+        /* -------- DROPDOWN -------- */
+        .submenu{
+            position:absolute;
+            top:100%;
+            left:50%;
+            transform:translate(-50%, 10px);
+            list-style:none;
+            padding:20px 35px;
+            margin:0;
+            background:#ffffff;
+            border-radius:14px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.12);
+            min-width:260px;
+            opacity:0;
+            visibility:hidden;
+            pointer-events:none;
+            transition:opacity 0.18s ease, transform 0.18s ease;
+        }
+
+        .submenu li{
+            margin:10px 0;
+        }
+
+        .submenu a{
+            display:block;
+            font-weight:600;
+            color:#333;
+            text-decoration:none;
+        }
+
+        .submenu a:hover{
+            color:#0ea574;
+        }
+
+        .has-sub:hover .submenu{
+            opacity:1;
+            visibility:visible;
+            pointer-events:auto;
+            transform:translate(-50%, 16px);
+        }
+
+        /* -------- HERO -------- */
+        .hero{
+            max-width:1200px;
+            margin:20px auto 30px;
+            background:#ffffff;
+            padding:40px 60px;
+            border-top:4px solid #0ea574;
+            border-bottom:4px solid #0ea574;
+        }
+
+        .hero h1{
+            margin-top:0;
+            margin-bottom:15px;
+            font-family:'Montserrat', sans-serif;
+            font-size:2.6rem;
+            font-weight:800;
+            letter-spacing:1px;
+            color:#0c6b3f;
+        }
+
+        .hero p{
+            font-size:1.6rem;
+            line-height:1.8;
+        }
+
+        /* -------- MAP SECTION -------- */
+        .map-section{
+            max-width:1200px;
+            margin:0 auto 40px;
+            background:#ffffff;
+            padding:40px 60px 50px;
+        }
+
+        .map-section h2{
+            margin-top:0;
+            margin-bottom:20px;
+            font-size:2.2rem;
+            color:#0c6b3f;
+            font-weight:800;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        .map-section p{
+            font-size:1.6rem;
+            line-height:1.8;
+        }
+
+        .map-section iframe{
+            display:block;
+            width:100%;
+            max-width:100%;
+            border:none;
+            border-radius:10px;
+            margin-bottom:20px;
+            height:450px;
+        }
+
+        /* -------- SPORT-LINKS -------- */
+        .sport-links{
+            max-width:1200px;
+            margin:0 auto 60px;
+            background:#ffffff;
+            padding:40px 60px 50px;
+        }
+
+        .sport-links-grid{
+            display:flex;
+            flex-wrap:wrap;
+            gap:30px;
+            justify-content:space-between;
+        }
+
+        .sport-card{
+            flex:1 1 250px;
+            min-width:0;
+        }
+
+        .sport-card h2{
+            font-size:2rem;
+            margin-bottom:10px;
+            color:#0c6b3f;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        .sport-card p{
+            font-size:1.5rem;
+            line-height:1.6;
+            margin-bottom:15px;
+        }
+
+        .btn-pill{
+            background:#0ea574;
+            border:none;
+            border-radius:999px;
+            padding:10px 30px;
+            font-size:1.3rem;
+            font-weight:700;
+            color:#ffffff;
+            text-decoration:none;
+            display:inline-block;
+        }
+
+        .btn-pill:hover,
+        .btn-pill:focus{
+            background:#0c825c;
+            color:#ffffff;
+        }
+
+        /* -------- FOOTER -------- */
+        .footer{
+            background:#222;
+            color:#ffffff;
+            padding:20px 0;
+            margin-top:40px;
+        }
+
+        .footer-content{
+            max-width:1200px;
+            margin:0 auto;
+            text-align:center;
+        }
+
+        .footer-content a{
+            color:#a5ffd4;
+            margin:0 10px;
+        }
+
+        .footer-content h4{
+            font-size:0.8rem;
+            margin-top:10px;
+        }
+
+        /* -------- RESPONSIVE -------- */
+        @media (max-width:768px){
+            .menu-main{
+                flex-direction:column;
+                align-items:flex-start;
+                gap:15px;
+                padding:10px 20px 20px;
+                display:none;
+            }
+            .menu-main.active{
+                display:flex;
+            }
+            .menu-header{
+                max-width:1200px;
+                margin:0 auto;
+                padding:10px 20px;
+                display:flex;
+                justify-content:flex-start;
+                align-items:center;
+            }
+            .burger{
+                display:inline-flex;
+                flex-direction:column;
+                gap:4px;
+                background:transparent;
+                border:none;
+                cursor:pointer;
+            }
+            .burger span{
+                display:block;
+                width:24px;
+                height:2px;
+                background:#222;
+            }
+            .has-sub:hover .submenu{
+                /* auf Mobile kein Hover-Dropdown, nur per JS Klick */
+                opacity:0;
+                visibility:hidden;
+                pointer-events:none;
+                transform:translate(-50%, 10px);
+            }
+            .has-sub.open .submenu{
+                position:static;
+                transform:none;
+                opacity:1;
+                visibility:visible;
+                pointer-events:auto;
+                box-shadow:none;
+                border-radius:0;
+                margin-top:10px;
+            }
+            .submenu{
+                width:100%;
+                padding:10px 20px;
+            }
+
+            .hero,
+            .map-section,
+            .sport-links{
+                padding:25px 20px 30px;
+            }
+
+            .map-section iframe{
+                height:320px;
+            }
+
+            .sport-links-grid{
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="menu-header">
+            <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="menu" id="menu-principal">
+            <ul class="menu-main">
+                <li><a href="index.html">Accueil</a></li>
+
+                <li class="has-sub">
+                    <a href="sport.html">Faire du sport en plein air</a>
+                    <ul class="submenu">
+                        <li><a href="tennis.html">Tennis</a></li>
+                        <li><a href="running.html">Running</a></li>
+                        <li><a href="basket.html">Basket</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-sub">
+                    <a href="equipements.html">S'équiper</a>
+                    <ul class="submenu">
+                        <li><a href="selection-ete.html">Notre sélection été</a></li>
+                        <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
+                        <li><a href="astuces.html">Astuces</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Faire du sport en plein air à Paris</h1>
+        <p>Découvrez les meilleurs lieux pour courir, jouer au tennis ou au basket, et équipez-vous pour profiter pleinement du plein air.</p>
+    </section>
+
+    <!-- CARTE -->
+    <section class="map-section">
+        <h2>Carte interactive des lieux</h2>
+        <iframe
+            title="Carte des lieux pour faire du sport en plein air à Paris"
+            src="https://www.google.com/maps/d/embed?mid=1dE0VjLq6B2FMIXfa11g2IpUoX3H8Q1U&ehbc=2E312F&noprof=1"
+            loading="lazy">
+        </iframe>
+        <p>Parcourez les terrains et parcs de Paris pour pratiquer votre sport préféré en plein air.</p>
+        <p>Pour vous simplifier la tâche, nous avons regroupé pour vous tous les endroits où faire du sport :
+            terrains de tennis, terrains de basket et parcs à Paris pour aller courir. Vous retrouverez dans cette
+            carte faite sur mesure l’endroit le plus proche de chez vous pour vous défouler ! Amateurs ou professionnels,
+            vous n’avez plus d’excuses pour louper votre séance de sport.</p>
+        <article>
+            <p>Vous êtes plutôt raquette de tennis, ballon de basket ou vous préférez enfiler votre plus
+            belle paire de chaussures pour aller courir ? Quelles que soient vos préférences, vous retrouverez dans
+            cette page toutes les informations vous permettant de faire du sport à Paris, en plein air.</p>
+        </article>
+    </section>
+
+    <!-- BUTTONS / LIENS VERS LES PAGES SPORT -->
+    <section class="sport-links">
+        <div class="sport-links-grid">
+            <div class="sport-card">
+                <h2>Tennis</h2>
+                <p>Pour en savoir plus sur le tennis.</p>
+                <a href="tennis.html" class="btn-pill">Je découvre le tennis</a>
+            </div>
+
+            <div class="sport-card">
+                <h2>Running</h2>
+                <p>Découvrez des conseils et itinéraires pour courir à Paris.</p>
+                <a href="running.html" class="btn-pill">Je découvre le running</a>
+            </div>
+
+            <div class="sport-card">
+                <h2>Basket</h2>
+                <p>Pour en savoir plus sur le basket et améliorer vos tirs.</p>
+                <a href="basket.html" class="btn-pill">Je découvre le basket</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="mailto:laurence.cusin-masset@etu.uni-paris1.fr?subject=Question%20sur%20le%20site%20internet">
+                Nous contacter par mail
+            </a>
+
+            <a href="mentions-legales.html">Mentions légales</a>
+
+            <h4>&copy; Laiquah Pandore et Laurence Cusin Masset — Tous droits réservés — 2025</h4>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.getElementById("burger");
+        const menuList = document.querySelector(".menu-main");
+        const subMenus = document.querySelectorAll(".has-sub");
+
+        // Ouvrir / fermer le menu principal (mobile)
+        burger.addEventListener("click", () => {
+            const isOpen = menuList.classList.toggle("active");
+            burger.classList.toggle("open", isOpen);
+            burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        // Ouvrir / fermer les sous-menus uniquement sur mobile
+        subMenus.forEach(item => {
+            const link = item.querySelector("a");
+
+            link.addEventListener("click", (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    item.classList.toggle("open");
+                    const submenu = item.querySelector(".submenu");
+                    submenu.classList.toggle("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
