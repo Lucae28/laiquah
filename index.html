@@ -9,8 +9,13 @@
     <meta name="keywords" content="ADJ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- eigene CSS -->
     <link rel="stylesheet" href="feuille-de-style.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -54,30 +59,14 @@
         .menu-main a{
             color:#222;
             text-decoration:none;
-            position:relative;
-            transition:color .2s ease;
+            font-family:'Montserrat', sans-serif;
+            transition:color 0.15s ease, text-shadow 0.15s ease;
         }
 
-        /* grünes Aufleuchten + moderner Unterstrich (optional) */
-        .menu-main a::after{
-            content:"";
-            position:absolute;
-            left:50%;
-            transform:translateX(-50%);
-            bottom:-4px;
-            width:0;
-            height:2px;
-            background:#0ea574;
-            transition:width .2s ease;
-        }
-
+        /* Hover-Effekt Navbar: grün leuchten, kein underline */
         .menu-main a:hover{
             color:#0ea574;
-            text-decoration:none;
-        }
-
-        .menu-main a:hover::after{
-            width:60%;
+            text-shadow:0 0 8px rgba(14,165,116,0.5);
         }
 
         .burger{
@@ -86,45 +75,44 @@
 
         /* -------- DROPDOWN -------- */
         .submenu{
-            list-style:none;
-            margin:0;
-            padding:20px 30px;
             position:absolute;
             top:100%;
             left:50%;
-            transform:translateX(-50%) translateY(10px);
+            transform:translate(-50%, 10px);
+            list-style:none;
+            padding:20px 35px;
+            margin:0;
             background:#ffffff;
-            border-radius:12px;
-            box-shadow:0 15px 40px rgba(0,0,0,0.12);
-            opacity:0;
-            pointer-events:none;
+            border-radius:14px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.12);
             min-width:260px;
-            transition:opacity .2s ease, transform .2s ease;
-            z-index:1001;
+            opacity:0;
+            visibility:hidden;
+            pointer-events:none;
+            transition:opacity 0.18s ease, transform 0.18s ease;
         }
 
         .submenu li{
-            margin-bottom:16px;
-        }
-
-        .submenu li:last-child{
-            margin-bottom:0;
+            margin:10px 0;
         }
 
         .submenu a{
+            display:block;
+            font-weight:600;
             color:#333;
-            font-weight:400;
-            white-space:nowrap;
+            text-decoration:none;
         }
 
         .submenu a:hover{
             color:#0ea574;
         }
 
+        /* WICHTIG: Solange Maus auf dem <li> ODER im Dropdown ist, bleibt es sichtbar */
         .has-sub:hover .submenu{
             opacity:1;
+            visibility:visible;
             pointer-events:auto;
-            transform:translateX(-50%) translateY(14px);
+            transform:translate(-50%, 16px);
         }
 
         /* -------- HERO -------- */
@@ -132,8 +120,8 @@
             position:relative;
             max-width:1200px;
             margin:0 auto;
-            border-top:4px solid #0ea574;   /* jetzt grün */
-            border-bottom:4px solid #0ea574;/* jetzt grün */
+            border-top:4px solid #0ea574;   /* grüner Rand */
+            border-bottom:4px solid #0ea574;/* grüner Rand */
         }
 
         .hero h1{
@@ -142,18 +130,18 @@
             left:50%;
             transform:translate(-50%, -50%);
             margin:0;
-        
+
             font-family:'Montserrat', sans-serif;
             font-size:4.8rem;
             font-weight:800;
             letter-spacing:4px;
             text-transform:uppercase;
-        
+
             color:#ffffff;
             text-shadow:
                 0 3px 10px rgba(0,0,0,0.35),
                 0 8px 30px rgba(0,0,0,0.45);
-        
+
             z-index:5;
         }
 
@@ -192,7 +180,7 @@
         /* -------- WELCOME / BIENVENUE -------- */
         .welcome-section{
             max-width:1200px;
-            margin:0 auto 0;          /* kein grauer Streifen unten */
+            margin:0 auto 0; /* kein grauer Streifen unten */
             background:#ffffff;
             padding:40px 60px 60px;
         }
@@ -228,8 +216,8 @@
         /* -------- A PROPOS / REST -------- */
         main{
             max-width:1200px;
-            margin:0 auto 60px;
-            padding:40px 60px 60px;
+            margin:0 auto 60px;   /* oben kein extra Abstand -> kein grauer Streifen */
+            padding:0 60px 60px;
             background:#ffffff;
         }
 
@@ -265,7 +253,7 @@
         }
 
         .footer-content h4{
-            font-size:0.8rem;   /* kleiner */
+            font-size:0.8rem; /* kleiner */
             margin-top:10px;
         }
     </style>
@@ -358,7 +346,7 @@
         </div>
     </section>
 
-    <!-- RESTLICHER INHALT -->
+    <!-- A PROPOS -->
     <main>
         <h2>A propos</h2>
         <p>
