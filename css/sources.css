@@ -1,1 +1,23 @@
+main{
+    max-width: 1200px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 50px 60px;
+}
 
+main p{
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px){
+    main{
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+
+    main p{
+        font-size: 1.6rem;
+    }
+}
