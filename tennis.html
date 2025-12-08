@@ -9,13 +9,10 @@
     <meta name="keywords" content="tennis, jouer, balle de tennis, terrains">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap wie auf der Startseite -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- eigene CSS-Datei (falls du dort noch extra Sachen hast) -->
     <link rel="stylesheet" href="feuille-de-style.css">
 
-    <!-- Fonts wie auf der Startseite -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -28,7 +25,6 @@
             background:#f3f5f7;
         }
 
-        /* -------- NAV -------- */
         /* -------- NAV -------- */
         header{
             background:#ffffff;
@@ -80,7 +76,8 @@
             position:absolute;
             top:100%;
             left:50%;
-            transform:translate(-50%, 10px);
+            
+            transform:translate(-50%, -8px);
             list-style:none;
             padding:20px 35px;
             margin:0;
@@ -93,30 +90,32 @@
             pointer-events:none;
             transition:opacity 0.18s ease, transform 0.18s ease;
         }
-
+        
         .submenu li{
             margin:10px 0;
         }
-
+        
         .submenu a{
             display:block;
             font-weight:600;
             color:#333;
             text-decoration:none;
         }
-
+        
         .submenu a:hover{
             color:#0ea574;
         }
-
+        
+        
         .has-sub:hover .submenu{
             opacity:1;
             visibility:visible;
             pointer-events:auto;
-            transform:translate(-50%, 16px);
+            
+            transform:translate(-50%, 0);
         }
 
-        /* -------- HERO (angepasst für Tennis-Seite) -------- */
+        /* -------- HERO -------- */
         .hero{
             max-width:1200px;
             margin:0 auto 40px;
@@ -184,7 +183,6 @@
             color:#555;
         }
 
-        /* -------- RESTLICHER INHALT -------- */
         main{
             max-width:1200px;
             margin:0 auto 60px;
@@ -284,7 +282,7 @@
         </nav>
     </header>
 
-    <!-- HERO (Titel + Einleitung) -->
+    <!-- HERO -->
     <section class="hero">
         <h1>Le vocabulaire essentiel du tennis pour bien débuter</h1>
         <p>
@@ -295,7 +293,7 @@
         </p>
     </section>
 
-    <!-- INTRO + FOTO in weißer Box (wie Bienvenue) -->
+    <!-- INTRO -->
     <section class="welcome-section">
         <h2>Bien débuter sur le court</h2>
 
@@ -407,7 +405,7 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS (wie auf den anderen Seiten) -->
+    <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
