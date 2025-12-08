@@ -130,17 +130,16 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <a href="mailto:laurence.cusin-masset@etu.uni-paris1.fr?subject=Question%20sur%20le%20site%20internet">
-                Nous contacter par mail
-            </a>
-
-            <a href="mentions-legales.html">Mentions légales</a>
-
-            <h4>&copy; Laiquah Pandore et Laurence Cusin Masset — Tous droits réservés — 2025</h4>
-        </div>
-    </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            })
+            .catch(err => console.error("Footer konnte nicht geladen werden:", err));
+    });
+    </script>
 
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
