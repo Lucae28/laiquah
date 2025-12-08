@@ -1,0 +1,33 @@
+.hero{
+    position:relative;
+    max-width:1200px;
+    margin:0 auto;
+    border-top:4px solid #0ea574;
+    border-bottom:4px solid #0ea574;
+}
+
+.hero h1{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:4.8rem;
+    font-weight:800;
+    letter-spacing:4px;
+    color:#ffffff;
+}
+
+/* Carousel */
+.hero-carousel img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+}
+
+/* Welcome */
+.welcome-section{
+    max-width:1200px;
+    margin:0 auto;
+    background:#ffffff;
+    padding:40px 60px 60px;
+}
