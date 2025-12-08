@@ -84,13 +84,6 @@ img{
 }
 
 
-.hero img,
-.tennis-intro img,
-.welcome-section img,
-.content img,
-.sport-card img,
-.sources-main img,
-.map-section iframe,
-.video-wrapper iframe {
+.section-box img {
     border-radius: calc(var(--box-radius) - 4px);
 }
