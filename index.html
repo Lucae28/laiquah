@@ -9,24 +9,14 @@
     <meta name="keywords" content="ADJ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- Eigenes CSS (falls vorhanden) -->
     <link rel="stylesheet" href="feuille-de-style.css">
-
-    <!-- Google-Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        :root{
-            --green-main:#0ea574;
-            --green-dark:#0c6b3f;
-        }
-
         body{
             margin:0;
             font-family: Arial, Helvetica, sans-serif;
@@ -58,20 +48,36 @@
         }
 
         .menu-main li{
-            position:relative; /* nötig für Dropdown */
+            position:relative; /* wichtig für Dropdown */
         }
 
         .menu-main a{
             color:#222;
             text-decoration:none;
-            font-family:'Montserrat', sans-serif;
-            transition:color 0.2s ease, transform 0.2s ease;
+            position:relative;
+            transition:color .2s ease;
+        }
+
+        /* grünes Aufleuchten + moderner Unterstrich (optional) */
+        .menu-main a::after{
+            content:"";
+            position:absolute;
+            left:50%;
+            transform:translateX(-50%);
+            bottom:-4px;
+            width:0;
+            height:2px;
+            background:#0ea574;
+            transition:width .2s ease;
         }
 
         .menu-main a:hover{
-            color:var(--green-main);
-            text-decoration:none;      /* kein Unterstreichen */
-            transform:translateY(-1px);/* optionaler kleiner Hover-Effekt */
+            color:#0ea574;
+            text-decoration:none;
+        }
+
+        .menu-main a:hover::after{
+            width:60%;
         }
 
         .burger{
@@ -82,36 +88,39 @@
         .submenu{
             list-style:none;
             margin:0;
-            padding:18px 0;
+            padding:20px 30px;
             position:absolute;
+            top:100%;
             left:50%;
             transform:translateX(-50%) translateY(10px);
-            top:100%;
-            min-width:260px;
             background:#ffffff;
             border-radius:12px;
-            box-shadow:0 12px 35px rgba(0,0,0,0.18);
+            box-shadow:0 15px 40px rgba(0,0,0,0.12);
             opacity:0;
             pointer-events:none;
-            transition:opacity 0.18s ease, transform 0.18s ease;
+            min-width:260px;
+            transition:opacity .2s ease, transform .2s ease;
+            z-index:1001;
         }
 
         .submenu li{
-            padding:10px 26px;
+            margin-bottom:16px;
         }
 
-        .submenu li a{
-            display:block;
-            width:100%;
-            color:#444;
-            font-weight:500;
+        .submenu li:last-child{
+            margin-bottom:0;
         }
 
-        .submenu li a:hover{
-            color:var(--green-dark);
+        .submenu a{
+            color:#333;
+            font-weight:400;
+            white-space:nowrap;
         }
 
-        /* Dropdown anzeigen bei Hover des Haupt-Items */
+        .submenu a:hover{
+            color:#0ea574;
+        }
+
         .has-sub:hover .submenu{
             opacity:1;
             pointer-events:auto;
@@ -123,8 +132,8 @@
             position:relative;
             max-width:1200px;
             margin:0 auto;
-            border-top:4px solid var(--green-main);   /* grün statt lila */
-            border-bottom:4px solid var(--green-main);
+            border-top:4px solid #0ea574;   /* jetzt grün */
+            border-bottom:4px solid #0ea574;/* jetzt grün */
         }
 
         .hero h1{
@@ -133,18 +142,18 @@
             left:50%;
             transform:translate(-50%, -50%);
             margin:0;
-
+        
             font-family:'Montserrat', sans-serif;
             font-size:4.8rem;
             font-weight:800;
             letter-spacing:4px;
             text-transform:uppercase;
-
+        
             color:#ffffff;
             text-shadow:
                 0 3px 10px rgba(0,0,0,0.35),
                 0 8px 30px rgba(0,0,0,0.45);
-
+        
             z-index:5;
         }
 
@@ -169,21 +178,21 @@
             transform:translateY(-50%);
         }
 
-        /* -------- TITEL FÜR H2 -------- */
+        /* -------- TITEL FÜR BEIDE H2 (Bienvenue! & A propos) -------- */
         .welcome-section h2,
         main h2{
             margin-top:0;
             margin-bottom:20px;
             font-size:2.5rem;
-            color:var(--green-dark);
+            color:#0c6b3f;
             font-weight:800;
-            font-family:'Montserrat', sans-serif;  /* gleiche Schrift wie Parisportif */
+            font-family:'Montserrat', sans-serif; /* gleiche Schrift wie Parisportif */
         }
 
         /* -------- WELCOME / BIENVENUE -------- */
         .welcome-section{
             max-width:1200px;
-            margin:0 auto 0;          /* kein grauer Streifen nach unten */
+            margin:0 auto 0;          /* kein grauer Streifen unten */
             background:#ffffff;
             padding:40px 60px 60px;
         }
@@ -201,7 +210,7 @@
         }
 
         .btn-pill{
-            background:var(--green-main);
+            background:#0ea574;
             border:none;
             border-radius:999px;
             padding:15px 45px;
@@ -212,7 +221,7 @@
 
         .btn-pill:hover,
         .btn-pill:focus{
-            background:var(--green-dark);
+            background:#0c825c;
             color:#ffffff;
         }
 
@@ -220,7 +229,7 @@
         main{
             max-width:1200px;
             margin:0 auto 60px;
-            padding:40px 60px 0;
+            padding:40px 60px 60px;
             background:#ffffff;
         }
 
@@ -256,7 +265,7 @@
         }
 
         .footer-content h4{
-            font-size:0.8rem;   /* etwas kleiner */
+            font-size:0.8rem;   /* kleiner */
             margin-top:10px;
         }
     </style>
@@ -349,7 +358,7 @@
         </div>
     </section>
 
-    <!-- A PROPOS -->
+    <!-- RESTLICHER INHALT -->
     <main>
         <h2>A propos</h2>
         <p>
