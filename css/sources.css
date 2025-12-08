@@ -1,19 +1,16 @@
-.sources-content{
+.sources-main{
     max-width: var(--content-width);
     margin: 60px auto;
     background: #ffffff;
     padding: 50px 60px;
 }
 
-.sources-content h1{
-    font-size: 2.5rem;
-    font-weight: 800;
+.sources-main h1{
+    font-size: 2.8rem;
     margin-bottom: 20px;
-    color: var(--color-heading);
 }
 
-.sources-content p{
-    font-size: 1.8rem;
+.sources-main p{
+    font-size: 2rem;
     line-height: 1.8;
-    margin-bottom: 20px;
 }
