@@ -12,7 +12,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- eigene CSS -->
+    <!-- eigene CSS (HIER liegt jetzt alles: body, navbar, hero, welcome, main, footer usw.) -->
     <link rel="stylesheet" href="feuille-de-style.css">
 
     <!-- Fonts -->
@@ -20,244 +20,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, Helvetica, sans-serif;
-            background:#f3f5f7;
-        }
-
-        /* -------- NAV -------- */
-        header{
-            background:#ffffff;
-            box-shadow:0 2px 4px rgba(0,0,0,0.05);
-            position:sticky;
-            top:0;
-            z-index:1000;
-        }
-
-        .menu{
-            max-width:1200px;
-            margin:0 auto;
-        }
-
-        .menu-main{
-            list-style:none;
-            padding:15px 0;
-            margin:0;
-            display:flex;
-            justify-content:center;
-            gap:80px;
-            font-weight:700;
-        }
-
-        .menu-main li{
-            position:relative;
-        }
-
-        .menu-main a{
-            color:#222;
-            text-decoration:none;
-            font-family:'Montserrat', sans-serif;
-            transition:color 0.15s ease, text-shadow 0.15s ease;
-        }
-
-        .menu-main a:hover,
-        .menu-main a:focus{
-            color:#0ea574;
-            text-shadow:none;
-        }
-
-        .burger{
-            display:none;
-        }
-
-        /* -------- DROPDOWN -------- */
-        .submenu{
-            position:absolute;
-            top:100%;
-            left:50%;
-            transform:translate(-50%, -8px);
-            list-style:none;
-            padding:20px 35px;
-            margin:0;
-            background:#ffffff;
-            border-radius:14px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.12);
-            min-width:260px;
-            opacity:0;
-            visibility:hidden;
-            pointer-events:none;
-            transition:opacity 0.18s ease, transform 0.18s ease;
-        }
-        
-        .submenu li{
-            margin:10px 0;
-        }
-        
-        .submenu a{
-            display:block;
-            font-weight:600;
-            color:#333;
-            text-decoration:none;
-        }
-        
-        .submenu a:hover{
-            color:#0ea574;
-        }
-        
-        .has-sub:hover .submenu{
-            opacity:1;
-            visibility:visible;
-            pointer-events:auto;
-            transform:translate(-50%, 0);
-        }
-
-        /* -------- HERO -------- */
-        .hero{
-            position:relative;
-            max-width:1200px;
-            margin:0 auto;
-            border-top:4px solid #0ea574;
-            border-bottom:4px solid #0ea574;
-        }
-
-        .hero h1{
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%, -50%);
-            margin:0;
-
-            font-family:'Montserrat', sans-serif;
-            font-size:4.8rem;
-            font-weight:800;
-            letter-spacing:4px;
-            text-transform:uppercase;
-
-            color:#ffffff;
-            text-shadow:
-                0 3px 10px rgba(0,0,0,0.35),
-                0 8px 30px rgba(0,0,0,0.45);
-
-            z-index:5;
-        }
-
-        .hero-carousel .item img{
-            width:100%;
-            height:360px;
-            object-fit:cover;
-        }
-
-        #myCarousel .carousel-indicators{
-            bottom:10px;
-        }
-
-        #myCarousel .carousel-control{
-            background:transparent;
-            width:8%;
-        }
-
-        #myCarousel .glyphicon{
-            font-size:40px;
-            top:50%;
-            transform:translateY(-50%);
-        }
-
-        .welcome-section h2,
-        main h2{
-            margin-top:0;
-            margin-bottom:20px;
-            font-size:2.5rem;
-            color:#0c6b3f;
-            font-weight:800;
-            font-family:'Montserrat', sans-serif;
-        }
-
-        .welcome-section{
-            max-width:1200px;
-            margin:0 auto 0;
-            background:#ffffff;
-            padding:40px 60px 60px;
-        }
-
-        .welcome-section p{
-            font-size:2.0rem;
-            line-height:1.8;
-        }
-
-        .welcome-buttons{
-            margin-top:30px;
-            display:flex;
-            justify-content:center;
-            gap:40px;
-        }
-
-        .btn-pill{
-            background:#0ea574;
-            border:none;
-            border-radius:999px;
-            padding:15px 45px;
-            font-size:1.3rem;
-            font-weight:700;
-            color:#ffffff;
-        }
-
-        .btn-pill:hover,
-        .btn-pill:focus{
-            background:#0c825c;
-            color:#ffffff;
-        }
-
-        /* -------- A PROPOS / REST -------- */
-        main{
-            max-width:1200px;
-            margin:0 auto 60px;
-            padding:0 60px 60px;
-            background:#ffffff;
-        }
-
-        main p{
-            font-size:2.0rem;
-            line-height:1.8;
-        }
-
-        main img{
-            max-width:100%;
-            height:auto;
-            display:block;
-            margin:20px auto 0;
-        }
-
-        /* -------- FOOTER -------- */
-        .footer{
-            background:#222;
-            color:#ffffff;
-            padding:20px 0;
-            margin-top:40px;
-        }
-
-        .footer-content{
-            max-width:1200px;
-            margin:0 auto;
-            text-align:center;
-        }
-
-        .footer-content a{
-            color:#a5ffd4;
-            margin:0 10px;
-        }
-
-        .footer-content h4{
-            font-size:0.8rem;
-            margin-top:10px;
-        }
-    </style>
 </head>
 
 <body>
 
+    <!-- Navbar wird per fetch geladen -->
     <div id="navbar"></div>
 
     <!-- HERO -->
@@ -329,14 +96,17 @@
         <img src="image/TennisMenu.jpg" alt="Tennis">
     </main>
 
+    <!-- Footer wird per fetch geladen -->
     <div id="footer"></div>
 
+    <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
+            // Navbar laden
             fetch("navbar.html")
                 .then(response => response.text())
                 .then(html => {
@@ -344,6 +114,7 @@
                 })
                 .catch(err => console.error("Fehler beim Laden der Navbar:", err));
 
+            // Footer laden
             fetch("footer.html")
                 .then(response => response.text())
                 .then(html => {
