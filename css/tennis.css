@@ -1,90 +1,77 @@
-/* =========================
-   HERO – oberer Block
-   (gleicher Look wie Sport-Seite)
-========================= */
-
-.hero{
+.tennis-hero{
     max-width: 1200px;
-    margin: 20px auto 30px;
+    margin: 20px auto 40px;
     background: #ffffff;
-    padding: 40px 60px;
+    padding: 40px 60px 40px;
     border-top: 4px solid #0ea574;
     border-bottom: 4px solid #0ea574;
 }
 
-.hero h1{
+.tennis-hero h1{
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     font-weight: 800;
     letter-spacing: 1px;
     color: #0c6b3f;
 }
 
-.hero p{
-    font-size: 1.6rem;
+.tennis-hero p{
+    font-size: 1.8rem;
     line-height: 1.8;
+    margin: 0;
 }
 
-/* =========================
-   BLOCK "Bien débuter sur le court"
-   (.welcome-section – wie ein weiterer Karten-Block,
-   vom Stil her ähnlich wie .map-section / .sport-links)
-========================= */
 
-.welcome-section{
+.tennis-intro{
     max-width: 1200px;
     margin: 0 auto 40px;
     background: #ffffff;
     padding: 40px 60px 60px;
 }
 
-.welcome-section h2{
+.tennis-intro h2{
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #0c6b3f;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
 }
 
-.welcome-section p{
-    font-size: 1.6rem;
+.tennis-intro p{
+    font-size: 1.8rem;
     line-height: 1.8;
 }
 
-.welcome-section figure{
+.tennis-intro figure{
     margin: 30px auto 0;
     text-align: center;
 }
 
-.welcome-section img{
+.tennis-intro img{
     max-width: 100%;
     height: auto;
     border-radius: 6px;
 }
 
-.welcome-section figcaption{
+.tennis-intro figcaption{
     margin-top: 10px;
     font-size: 1.3rem;
     font-style: italic;
     color: #555;
 }
 
-/* =========================
-   HAUPTINHALT + GLOSSAR
-   (Main-Block, gleiches „Karten“-Layout)
-========================= */
 
-main{
+.tennis-content{
     max-width: 1200px;
     margin: 0 auto 60px;
     background: #ffffff;
     padding: 40px 60px 60px;
 }
 
-main h2{
+.tennis-content h2{
     font-size: 2.2rem;
     margin-bottom: 15px;
     color: #0c6b3f;
@@ -92,57 +79,56 @@ main h2{
     font-family: 'Montserrat', sans-serif;
 }
 
-main h3{
-    font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #0c6b3f;
-    font-family: 'Montserrat', sans-serif;
-}
-
-main p{
+.tennis-content p{
     font-size: 1.6rem;
     line-height: 1.8;
 }
 
-/* Links im Text */
-main a{
+.tennis-content a{
     color: #0ea574;
     font-weight: 600;
-    text-decoration: none;
 }
 
-main a:hover,
-main a:focus{
-    text-decoration: underline;
+.tennis-content a:hover,
+.tennis-content a:focus{
+    color: #0c825c;
 }
 
-/* Glossar (dl, dt, dd) */
-main dl{
-    margin-top: 15px;
+.glossaire{
+    margin-top: 30px;
+    padding-top: 10px;
 }
 
-main dt{
+.glossaire h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0c6b3f;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.glossaire dl{
+    margin-top: 10px;
+}
+
+.glossaire dt{
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
-main dd{
+.glossaire dd{
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 1.5rem;
     line-height: 1.6;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 768px){
 
-    .hero,
-    .welcome-section,
-    main{
+    .tennis-hero,
+    .tennis-intro,
+    .tennis-content{
         padding: 25px 20px 30px;
     }
 }
