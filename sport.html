@@ -78,7 +78,8 @@
             position:absolute;
             top:100%;
             left:50%;
-            transform:translate(-50%, 10px);
+            
+            transform:translate(-50%, -8px);
             list-style:none;
             padding:20px 35px;
             margin:0;
@@ -91,29 +92,30 @@
             pointer-events:none;
             transition:opacity 0.18s ease, transform 0.18s ease;
         }
-
+        
         .submenu li{
             margin:10px 0;
         }
-
+        
         .submenu a{
             display:block;
             font-weight:600;
             color:#333;
             text-decoration:none;
         }
-
+        
         .submenu a:hover{
             color:#0ea574;
         }
-
+        
+        
         .has-sub:hover .submenu{
             opacity:1;
             visibility:visible;
             pointer-events:auto;
-            transform:translate(-50%, 16px);
+            
+            transform:translate(-50%, 0);
         }
-
         /* -------- HERO -------- */
         .hero{
             max-width:1200px;
