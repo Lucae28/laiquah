@@ -9,13 +9,11 @@
     <meta name="keywords" content="sport plein air Paris, tennis, running, basket, parcs, terrains">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- eigene CSS (falls du noch etwas extern hast) -->
     <link rel="stylesheet" href="feuille-de-style.css">
 
     <style>
@@ -40,7 +38,7 @@
         }
 
         .menu-header{
-            display:none; /* Burger nur falls du ihn brauchst, hier ausgeblendet für Desktop */
+            display:none;
         }
 
         .menu-main{
@@ -64,7 +62,6 @@
             transition:color 0.15s ease;
         }
 
-        /* Hover: nur grün, KEIN Schatten */
         .menu-main a:hover{
             color:#0ea574;
         }
@@ -283,7 +280,6 @@
                 background:#222;
             }
             .has-sub:hover .submenu{
-                /* auf Mobile kein Hover-Dropdown, nur per JS Klick */
                 opacity:0;
                 visibility:hidden;
                 pointer-events:none;
