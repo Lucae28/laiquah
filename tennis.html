@@ -9,11 +9,11 @@
     <meta name="keywords" content="tennis, jouer, balle de tennis, terrains">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Icon (falls vorhanden) -->
+    <!-- Icon wie bei index.html -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 
-    <!-- Bootstrap (wie auf Index) -->
+    <!-- Bootstrap (für Grid etc.) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <!-- Gemeinsame CSS-Dateien -->
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
 
-    <!-- Seiten-spezifisch -->
+    <!-- Seiten-spezifisches CSS -->
     <link rel="stylesheet" href="css/tennis.css">
 
     <!-- Fonts -->
@@ -33,10 +33,10 @@
 
 <body>
 
-    <!-- NAVBAR per fetch -->
+    <!-- NAVBAR wird per fetch geladen -->
     <div id="navbar"></div>
 
-    <!-- HERO – gleiches Prinzip wie .hero auf sport.html, aber mit tennis-Text -->
+    <!-- HERO – wie sport-hero, nur für Tennis -->
     <section class="tennis-hero">
         <h1>Le vocabulaire essentiel du tennis pour bien débuter</h1>
         <p>
@@ -47,14 +47,13 @@
         </p>
     </section>
 
-    <!-- BLOCK 1: "Bien débuter sur le court" – benutzt jetzt .tennis-content -->
-    <section class="tennis-content">
+    <!-- INTRO / IMAGE -->
+    <section class="tennis-intro">
         <h2>Bien débuter sur le court</h2>
 
         <p>
-            Pour bien débuter le tennis, il est essentiel de se familiariser avec les règles du jeu
-            et son vocabulaire spécifique. Chaque échange, chaque
-            <em><a href="#service">service</a></em>, chaque <em><a href="#let">let</a></em> ou
+            Pour bien débuter le tennis, il est essentiel de se familiariser avec les règles du jeu et son vocabulaire spécifique.
+            Chaque échange, chaque <em><a href="#service">service</a></em>, chaque <em><a href="#let">let</a></em> ou
             <em><a href="#faute-directe">faute directe</a></em> participe à la dynamique d’un match.
             Les débutants peuvent s’inspirer du style athlétique de
             <strong><a href="#Jo-Wilfried-Tsonga">Jo-Wilfried Tsonga</a></strong>,
@@ -62,10 +61,7 @@
             ou de la précision d’<strong><a href="#Amelie-Mauresmo">Amélie Mauresmo</a></strong>,
             tous professionnels et maîtres de leur discipline.
         </p>
-    </section>
 
-    <!-- BLOCK 2: Bild – nutzt .tennis-image wie in tennis.css definiert -->
-    <section class="tennis-image">
         <figure>
             <img src="image/TennisMenu.jpg" alt="Tennis">
             <figcaption>
@@ -74,8 +70,8 @@
         </figure>
     </section>
 
-    <!-- BLOCK 3: Textlicher Teil / Erklärungen – wieder .tennis-content -->
-    <section class="tennis-content">
+    <!-- CONTENU TEXTE + GLOSSAIRE -->
+    <main class="tennis-content">
         <h2 id="Comprendrelesfondamentauxdutennis">Comprendre les fondamentaux du tennis</h2>
 
         <p>
@@ -101,58 +97,58 @@
             illustrent parfaitement l'utilisation de ces coups. Maîtriser ces mots, c’est donc comprendre non seulement la technique,
             mais aussi l’intelligence de jeu propre à chaque joueur professionnel.
         </p>
-    </section>
 
-    <!-- BLOCK 4: Glossaire – nutzt .glossaire aus tennis.css -->
-    <section class="glossaire">
-        <h3>Glossaire</h3>
+        <!-- GLOSSAIRE -->
+        <section class="glossaire">
+            <h3>Glossaire</h3>
 
-        <dl>
-            <dt id="service">Service</dt>
-            <dd>Coup technique par excellence au tennis, le service lance le début du match, mais c'est aussi une opportunité de marquer le point.</dd>
+            <dl>
+                <dt id="service">Service</dt>
+                <dd>Coup technique par excellence au tennis, le service lance le début du match, mais c'est aussi une opportunité de marquer le point.</dd>
 
-            <dt id="let">Let</dt>
-            <dd>Lorsque la balle touche le filet sur un service mais tombe dans le bon carré. Le service est alors rejoué.</dd>
+                <dt id="let">Let</dt>
+                <dd>Lorsque la balle touche le filet sur un service mais tombe dans le bon carré. Le service est alors rejoué.</dd>
 
-            <dt id="faute-directe">Faute directe</dt>
-            <dd>Erreur commise par un joueur sans pression particulière de l’adversaire.</dd>
+                <dt id="faute-directe">Faute directe</dt>
+                <dd>Erreur commise par un joueur sans pression particulière de l’adversaire.</dd>
 
-            <dt id="Jo-Wilfried-Tsonga">Jo-Wilfried Tsonga</dt>
-            <dd>Joueur explosif connu pour son service puissant et son style offensif. Finaliste de l’Open d’Australie en 2008 et ancien membre du Top 5 mondial.</dd>
+                <dt id="Jo-Wilfried-Tsonga">Jo-Wilfried Tsonga</dt>
+                <dd>Joueur explosif connu pour son service puissant et son style offensif. Finaliste de l’Open d’Australie en 2008 et ancien membre du Top 5 mondial.</dd>
 
-            <dt id="Yannick-Noah">Yannick Noah</dt>
-            <dd>Vainqueur de Roland-Garros en 1983, dernier Français sacré en simple dans un tournoi du Grand Chelem. Connu pour son charisme et son style athlétique.</dd>
+                <dt id="Yannick-Noah">Yannick Noah</dt>
+                <dd>Vainqueur de Roland-Garros en 1983, dernier Français sacré en simple dans un tournoi du Grand Chelem. Connu pour son charisme et son style athlétique.</dd>
 
-            <dt id="Amelie-Mauresmo">Amélie Mauresmo</dt>
-            <dd>Ancienne n°1 mondiale, victorieuse de l’Open d’Australie et de Wimbledon en 2006. Reconnue pour son élégance de jeu et son revers puissant.</dd>
+                <dt id="Amelie-Mauresmo">Amélie Mauresmo</dt>
+                <dd>Ancienne n°1 mondiale, victorieuse de l’Open d’Australie et de Wimbledon en 2006. Reconnue pour son élégance de jeu et son revers puissant.</dd>
 
-            <dt id="ace">Ace</dt>
-            <dd>Service gagnant que l’adversaire ne touche pas. C’est l’un des coups les plus spectaculaires, souvent associé à des joueurs puissants.</dd>
+                <dt id="ace">Ace</dt>
+                <dd>Service gagnant que l’adversaire ne touche pas. C’est l’un des coups les plus spectaculaires, souvent associé à des joueurs puissants.</dd>
 
-            <dt id="unpassingshot">Passing-shot</dt>
-            <dd>Coup gagnant frappé lorsque l’adversaire est monté au filet, la balle passant à côté de lui ou au-dessus.</dd>
+                <dt id="unpassingshot">Passing-shot</dt>
+                <dd>Coup gagnant frappé lorsque l’adversaire est monté au filet, la balle passant à côté de lui ou au-dessus.</dd>
 
-            <dt id="tie-break">Tie-break</dt>
-            <dd>Jeu décisif utilisé pour départager les joueurs à 6-6 dans un set (sauf règles particulières en Grand Chelem).</dd>
+                <dt id="tie-break">Tie-break</dt>
+                <dd>Jeu décisif utilisé pour départager les joueurs à 6-6 dans un set (sauf règles particulières en Grand Chelem).</dd>
 
-            <dt id="Caroline-Garcia">Caroline Garcia</dt>
-            <dd>Joueuse française spécialiste du jeu agressif. Plusieurs titres WTA, notamment en 2022 avec une saison exceptionnelle couronnée par une victoire au Masters.</dd>
+                <dt id="Caroline-Garcia">Caroline Garcia</dt>
+                <dd>Joueuse française spécialiste du jeu agressif. Plusieurs titres WTA, notamment en 2022 avec une saison exceptionnelle couronnée par une victoire au Masters.</dd>
 
-            <dt id="Gael-Monfils">Gaël Monfils</dt>
-            <dd>
-                Joueur français spectaculaire, apprécié pour son sens du show et ses capacités athlétiques hors normes.
-                Demi-finaliste à Roland-Garros en 2008 et plusieurs fois membre du Top 10 mondial, il est connu pour ses
-                glissades impressionnantes, ses points défensifs incroyables, ses passing-shots décisifs et sa capacité à
-                retourner des situations compliquées.
-            </dd>
-        </dl>
+                <dt id="Gael-Monfils">Gaël Monfils</dt>
+                <dd>
+                    Joueur français spectaculaire, apprécié pour son sens du show et ses capacités athlétiques hors normes.
+                    Demi-finaliste à Roland-Garros en 2008 et plusieurs fois membre du Top 10 mondial, il est connu pour ses
+                    glissades impressionnantes, ses points défensifs incroyables, ses passing-shots décisifs et sa capacité à
+                    retourner des situations compliquées.
+                </dd>
+            </dl>
+        </section>
 
         <p>
             Revenir aux <a href="#Comprendrelesfondamentauxdutennis">fondamentaux du tennis</a>.
         </p>
-    </section>
+    </main>
 
-    <!-- FOOTER per fetch -->
+    <!-- FOOTER wird per fetch geladen -->
     <div id="footer"></div>
 
     <!-- SCRIPTS -->
@@ -161,6 +157,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+
             // Navbar laden
             fetch("navbar.html")
                 .then(response => response.text())
