@@ -14,7 +14,8 @@
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/base.css">
@@ -31,34 +32,8 @@
 
 <body>
 
-    <!-- MENU -->
-    <header>
-        <nav class="menu">
-            <ul class="menu-main">
-                <li><a href="index.html">Accueil</a></li>
-
-                <li class="has-sub">
-                    <a href="sport.html">Faire du sport en plein air</a>
-                    <ul class="submenu">
-                        <li><a href="tennis.html">Tennis</a></li>
-                        <li><a href="running.html">Running</a></li>
-                        <li><a href="basket.html">Basket</a></li>
-                    </ul>
-                </li>
-
-                <li class="has-sub">
-                    <a href="equipements.html">S'équiper</a>
-                    <ul class="submenu">
-                        <li><a href="selection-ete.html">Notre sélection été</a></li>
-                        <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
-                        <li><a href="astuces.html">Astuces</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="sources.html">Sources</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
 
     <!-- HERO -->
     <section class="hero">
@@ -99,15 +74,13 @@
         </div>
     </section>
 
-    <!-- BIENVENUE + BUTTONS -->
+    <!-- BIENVENUE -->
     <section class="welcome-section">
         <h2>Bienvenue !</h2>
 
         <p>
-            Quis enim aut eum diligat quem metuat, aut eum a quo se metui putet? Coluntur tamen simulatione
-            dumtaxat ad tempus. Quod si forte, ut fit plerumque, ceciderunt, tum intellegitur quam fuerint
-            inopes amicorum. Quod Tarquinium dixisse ferunt, tum exsulantem se intellexisse quos fidos amicos
-            habuisset, quos infidos, cum iam neutris gratiam referre posset.
+            Quis enim aut eum diligat quem metuat, aut eum a quo se metui putet?
+            Coluntur tamen simulatione dumtaxat ad tempus.
         </p>
 
         <div class="welcome-buttons">
@@ -120,10 +93,7 @@
     <main>
         <h2>A propos</h2>
         <p>
-            Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati. Turpis enim
-            excusatio est et minime accipienda cum in ceteris peccatis, tum si quis contra rem publicam se amici
-            causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati sumus ut nos longe prospicere
-            oporteat futuros casus rei publicae...
+            Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati.
         </p>
 
         <img src="image/TennisMenu.jpg" alt="Tennis">
@@ -136,18 +106,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch("footer.html")
-                .then(res => res.text())
-                .then(html => {
-                    const footerContainer = document.getElementById("footer");
-                    if (footerContainer) {
-                        footerContainer.innerHTML = html;
-                    }
-                })
-                .catch(err => console.error("Footer konnte nicht geladen werden:", err));
-        });
-    </script>
+    <!-- LAYOUT-SCRIPT -->
+    <script src="js/layout.js"></script>
+
 </body>
 </html>
