@@ -91,3 +91,21 @@ img{
 .section-box img {
     border-radius: calc(var(--box-radius) - 4px);
 }
+
+
+.hero,
+.welcome-section,
+.tennis-hero,
+.tennis-intro,
+.tennis-content,
+.section-box,
+main,
+.content,
+.sport-card,
+.equipements,
+.selection-hiver,
+.sources-main,
+.map-section,
+.sport-links {
+    border-radius: 16px;
+}
