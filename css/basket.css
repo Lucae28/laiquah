@@ -43,6 +43,12 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+.quote p{
+    font-size: 1.8rem;
+    line-height: 1.7;
+    margin: 0 0 10px;
+}
+
 .quote footer{
     margin-top: 10px;
     font-weight: 700;
