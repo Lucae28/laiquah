@@ -1,7 +1,7 @@
 .hero{
     position: relative;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto 40px;
     border-top: 4px solid #0ea574;
     border-bottom: 4px solid #0ea574;
 }
@@ -62,7 +62,7 @@ main h2{
 /* ===== WELCOME / BIENVENUE ===== */
 .welcome-section{
     max-width: 1200px;
-    margin: 0 auto 0;
+    margin: 0 auto 40px;
     background: #ffffff;
     padding: 40px 60px 60px;
 }
@@ -101,7 +101,7 @@ main h2{
 main{
     max-width: 1200px;
     margin: 0 auto 60px;
-    padding: 0 60px 60px;
+    padding: 40px 60px 60px;
     background: #ffffff;
 }
 
