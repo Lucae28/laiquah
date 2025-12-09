@@ -8,6 +8,10 @@ header{
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+.burger{
+    display: none;
+}
+
 .menu{
     max-width:1200px;
     margin:0 auto;
