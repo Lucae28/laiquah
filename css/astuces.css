@@ -49,6 +49,7 @@ main p{
     margin: 0 auto 40px;
     background: #ffffff;
     padding: 40px 60px 60px;
+    border-radius: 12px;
 }
 
 .astuces h2{
