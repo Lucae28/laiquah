@@ -132,7 +132,6 @@ main img{
 
 .about-content {
     display: flex;
-    align-items: flex-start;
     gap: 60px;
 }
 
@@ -154,6 +153,7 @@ main img{
     color: #333;
 }
 
+.about-image,
 .about-text {
     flex: 1;
 }
