@@ -114,3 +114,7 @@ main,
 .sport-links {
     border-radius: 16px;
 }
+
+.no-radius{
+    border-radius: 0 !important;
+}
