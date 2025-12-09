@@ -169,6 +169,17 @@ main img{
     line-height: 1.6;
 }
 
+.about-figure {
+    margin: 0;
+}
+
+.about-figure figcaption {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #555;
+}
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
