@@ -83,6 +83,11 @@ img{
     font-weight:600;
 }
 
+
+.hero img,
+.tennis-intro img,
+.welcome-section img,
+.content img,
 .map-section iframe,
 .video-wrapper iframe {
     border-radius: calc(var(--box-radius) - 4px);
