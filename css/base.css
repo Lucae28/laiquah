@@ -114,15 +114,3 @@ main,
 .sport-links {
     border-radius: 16px;
 }
-
-.no-radius{
-    border-radius: 0 !important;
-}
-
-.only-top-radius{
-    border-radius: 12px 12px 0 0;
-}
-
-.only-bottom-radius{
-    border-radius: 0 0 12px 12px;
-}
