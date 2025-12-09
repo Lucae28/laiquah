@@ -117,10 +117,10 @@ main img{
     margin: 20px auto 0;
 }
 
-/* A PROPOS */
+/* ===== A PROPOS ===== */
 .about-section {
     max-width: 1200px;
-    margin: 0 auto 40px;
+    margin: 0 auto 60px;
     background: #ffffff;
     padding: 40px 60px 60px;
 }
@@ -130,15 +130,32 @@ main img{
     margin-bottom: 40px;
 }
 
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.about-image {
+    flex: 0 0 45%;
+}
+
 .about-image img {
-    width: 70%;
+    width: 100%;
+    max-width: 520px;
     height: auto;
+    display: block;
+    border-radius: 12px;
 }
 
 .about-caption {
-    margin-top: 15px;
-    font-size: 14px;
+    margin-top: 6px;
+    font-size: 1.4rem;
     color: #333;
+}
+
+.about-text {
+    flex: 1;
 }
 
 .about-text h3 {
@@ -147,6 +164,17 @@ main img{
 }
 
 .about-text p {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
