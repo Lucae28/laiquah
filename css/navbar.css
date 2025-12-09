@@ -130,18 +130,27 @@ header{
     }
 
     .submenu{
-        position:static;
-        transform:none;
-        box-shadow:none;
-        border-radius:0;
-        padding:0 0 0 20px;
-        margin-top:5px;
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 0;
+
+        margin: 0 0 5px 20px;
+        padding: 0;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        display: block;
     }
 
     .has-sub:hover .submenu{
-        opacity:1;
-        visibility:visible;
-        pointer-events:auto;
-        transform:none;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
     }
 }
