@@ -5,7 +5,7 @@
     <title>Basket</title>
 
     <meta name="author" content="Laurence Cusin-Masset et Laiquah Pandore">
-    <meta name="description" content="Vous pratiquez le basket à Paris ? Découvrez des astuces pour améliorer vos tirs et marquer plus facilement.">
+    <meta name="description" content="Vous pratiquez le basket à Paris ? Découvrez des astuces pour améliorer vos tirs.">
     <meta name="keywords" content="basket, ballon de basket, panier, terrain, tirer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,9 +14,10 @@
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- CSS  -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -25,68 +26,45 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
 
-<!-- MENU -->
-<header>
-    <nav class="menu">
-        <ul class="menu-main">
-            <li><a href="index.html">Accueil</a></li>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
 
-            <li class="has-sub">
-                <a href="sport.html">Faire du sport en plein air</a>
-                <ul class="submenu">
-                    <li><a href="tennis.html">Tennis</a></li>
-                    <li><a href="running.html">Running</a></li>
-                    <li><a href="basket.html">Basket</a></li>
-                </ul>
-            </li>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Basket : marquez votre plus beau panier</h1>
+        <p>
+            Vous voulez améliorer vos tirs au basket ?
+            Découvrez les meilleures astuces pour perfectionner votre geste
+            et réussir vos plus beaux paniers.
+        </p>
+    </section>
 
-            <li class="has-sub">
-                <a href="equipements.html">S'équiper</a>
-                <ul class="submenu">
-                    <li><a href="selection-ete.html">Notre sélection été</a></li>
-                    <li><a href="selection-hiver.html">Notre sélection hiver</a></li>
-                    <li><a href="astuces.html">Astuces</a></li>
-                </ul>
-            </li>
+    <!-- CONTENU -->
+    <section class="content">
 
-            <li><a href="sources.html">Sources</a></li>
-        </ul>
-    </nav>
-</header>
+        <!-- QUOTE -->
+        <blockquote class="quote">
+            <p>« J’ai échoué encore et encore dans ma vie. Et c’est pour cela que je réussis. »</p>
+            <footer>Michael Jordan</footer>
+        </blockquote>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Basket : marquez votre plus beau panier</h1>
-    <p>
-        Vous voulez améliorer vos tirs au basket ?
-        Découvrez les meilleures astuces pour perfectionner votre geste
-        et réussir vos plus beaux paniers.
-    </p>
-</section>
-
-<!-- CONTENU -->
-<section class="content">
-
-    <!-- QUOTE -->
-    <blockquote class="quote">
-        <p>« J’ai échoué encore et encore dans ma vie. Et c’est pour cela que je réussis. »</p>
-        <footer>Michael Jordan</footer>
-    </blockquote>
-
-    <!-- VIDEO -->
-    <div class="video-wrapper">
-        <iframe width="800" height="450"
+        <!-- VIDEO -->
+        <div class="video-wrapper">
+            <iframe
+                width="800"
+                height="450"
                 src="https://www.youtube.com/embed/Ian4YZzLIMM"
                 allowfullscreen>
-        </iframe>
-    </div>
+            </iframe>
+        </div>
 
-</section>
+    </section>
 
     <!-- FOOTER -->
     <div id="footer"></div>
@@ -95,18 +73,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch("footer.html")
-                .then(res => res.text())
-                .then(html => {
-                    const footerContainer = document.getElementById("footer");
-                    if (footerContainer) {
-                        footerContainer.innerHTML = html;
-                    }
-                })
-                .catch(err => console.error("Footer konnte nicht geladen werden:", err));
-        });
-    </script>
+    <!-- LAYOUT SCRIPT -->
+    <script src="js/layout.js"></script>
+
 </body>
 </html>
