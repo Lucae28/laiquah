@@ -145,6 +145,7 @@ main img{
     height: auto;
     display: block;
     border-radius: 12px;
+    margin: 20px 0 0;
 }
 
 .about-caption {
