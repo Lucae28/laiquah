@@ -83,6 +83,10 @@ img{
     font-weight:600;
 }
 
+.map-section iframe,
+.video-wrapper iframe {
+    border-radius: calc(var(--box-radius) - 4px);
+}
 
 .section-box img {
     border-radius: calc(var(--box-radius) - 4px);
