@@ -114,6 +114,7 @@
 .glossaire dt{
     font-weight: 700;
     margin-top: 18px;
+    scroll-margin-top: 120px;
 }
 
 .glossaire dd{
@@ -130,5 +131,9 @@
     .tennis-intro,
     .tennis-content{
         padding: 25px 20px 30px;
+    }
+
+    .glossaire dt{
+        scroll-margin-top: 140px;
     }
 }
