@@ -80,3 +80,64 @@ header{
     pointer-events:auto;
     transform:translate(-50%, 0);
 }
+
+
+/* ---- MOBILE NAV ---- */
+@media (max-width: 768px){
+
+    .menu{
+        justify-content:flex-start;
+        padding:0 20px;
+    }
+
+    .burger{
+        display:block;
+        background:none;
+        border:none;
+        font-size:2.4rem;
+        cursor:pointer;
+        padding:10px 0;
+    }
+
+    .menu-main{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+
+        flex-direction:column;
+        gap:0;
+        padding:10px 0 15px;
+        margin:0;
+
+        background:#ffffff;
+        box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+        display:none;
+    }
+
+    .menu-main.is-open{
+        display:flex;
+    }
+
+    .menu-main li{
+        text-align:left;
+        padding:8px 20px;
+    }
+
+    .submenu{
+        position:static;
+        transform:none;
+        box-shadow:none;
+        border-radius:0;
+        padding:0 0 0 20px;
+        margin-top:5px;
+    }
+
+    .has-sub:hover .submenu{
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:none;
+    }
+}
