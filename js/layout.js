@@ -1,23 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     // Navbar laden
-    const navbarContainer = document.getElementById("navbar");
-    if (navbarContainer) {
-        fetch("navbar.html")
-            .then(response => response.text())
-            .then(html => {
-                navbarContainer.innerHTML = html;
-            })
-            .catch(err => console.error("Navbar konnte nicht geladen werden:", err));
-    }
+    fetch("navbar.html")
+        .then(res => {
+            if (!res.ok) throw new Error("Navbar nicht gefunden");
+            return res.text();
+        })
+        .then(html => {
+            const nav = document.getElementById("navbar");
+            if (nav) nav.innerHTML = html;
+        })
+        .catch(err => console.error(err));
 
     // Footer laden
-    const footerContainer = document.getElementById("footer");
-    if (footerContainer) {
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(html => {
-                footerContainer.innerHTML = html;
-            })
-            .catch(err => console.error("Footer konnte nicht geladen werden:", err));
-    }
+    fetch("footer.html")
+        .then(res => {
+            if (!res.ok) throw new Error("Footer nicht gefunden");
+            return res.text();
+        })
+        .then(html => {
+            const footer = document.getElementById("footer");
+            if (footer) footer.innerHTML = html;
+        })
+        .catch(err => console.error(err));
 });
