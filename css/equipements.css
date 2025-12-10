@@ -149,15 +149,66 @@ main p{
     color: #000;
 }
 
-/* Responsive */
-@media (max-width: 768px){
-    .sports-equipements{
-        padding: 25px 20px 30px;
-    }
+/* ===== BOX 3 ===== */
 
-    .sports-grid{
-        flex-direction: column;
-    }
+.season-guides{
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 40px 60px 60px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.season-guides h2{
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+.season-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.season-item{
+    flex: 1;
+}
+
+.season-btn{
+    display: inline-block;
+    padding: 18px 50px;
+    border-radius: 999px;
+    background: #4a9c89;
+    color: #ffffff;
+    font-size: 2.0rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.season-btn:hover,
+.season-btn:focus{
+    background: #0ea574;
+    color: #ffffff;
+}
+
+.season-item p{
+    margin-top: 15px;
+    font-size: 1.6rem;
+}
+
+.season-item p a{
+    color: #000;
+    text-decoration: none;
+}
+
+.season-item p a:hover{
+    text-decoration: underline;
 }
 
 
@@ -166,5 +217,26 @@ main p{
     .hero,
     main{
         padding: 25px 20px 30px;
+    }
+
+    .sports-equipements{
+        padding: 25px 20px 30px;
+    }
+
+    .sports-grid{
+        flex-direction: column;
+    }
+
+    .season-guides{
+        padding: 25px 20px 30px;
+    }
+
+    .season-buttons{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .season-btn{
+        width: 100%;
     }
 }
