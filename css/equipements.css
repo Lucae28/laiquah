@@ -72,15 +72,24 @@ main p{
 
 /* ===== QUOTE ===== */
 
+.content{
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    text-align: center;
+}
+
 .quote{
     font-style: italic;
     border-left: 4px solid #0ea574;
     padding: 18px 24px;
-    margin: 30px auto 40px;
+    margin: 0 auto 40px;
     background: #f9f9f9;
     color: #222;
     max-width: 800px;
-
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
@@ -88,7 +97,7 @@ main p{
 .quote p{
     font-size: 1.8rem;
     line-height: 1.7;
-    margin: 0;
+    margin: 0 0 10px;
 }
 
 .quote footer{
