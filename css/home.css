@@ -149,9 +149,14 @@ main img{
 }
 
 .about-caption {
-    margin-top: 6px;
-    font-size: 1.4rem;
-    color: #333;
+    margin: 0;
+}
+
+.about-caption {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #555;
 }
 
 .about-image,
@@ -167,17 +172,6 @@ main img{
 .about-text p {
     font-size: 1.6rem;
     line-height: 1.6;
-}
-
-.about-figure {
-    margin: 0;
-}
-
-.about-figure figcaption {
-    margin-top: 10px;
-    font-size: 1.3rem;
-    font-style: italic;
-    color: #555;
 }
 
 @media (max-width: 768px) {
