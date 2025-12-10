@@ -81,8 +81,31 @@
     color: #222;
 }
 
+/* ===== BOX ===== */
+.video-box,
+.text-quote-box{
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.basket-text{
+    max-width: 900px;
+    margin: 0 auto 30px;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #222;
+}
+
 @media (max-width: 768px){
 
+     .video-box,
+    .text-quote-box{
+        padding: 25px 20px;
+    }
+    
     .hero,
     .content{
         padding: 25px 20px 30px;
