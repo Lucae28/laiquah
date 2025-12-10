@@ -126,7 +126,6 @@
     color: #ffffff;
 }
 
-
 .running-where-carousel{
     flex: 0 0 45%;
     height: 340px;
@@ -136,6 +135,18 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    height: 100%;
+}
+
+.running-where-carousel .item{
+    height: 100%;
+}
+
+.running-where-carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* ================= BOX 3 ================= */
@@ -185,31 +196,29 @@
     line-height: 1.6;
 }
 
-
 .running-carousel{
     position: relative;
     margin-top: 20px;
-    height: 220px;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
-.running-carousel .carousel-control{
-    background: transparent;
-}
-
-
-.running-where-carousel .item,
 .running-carousel .item{
     height: 100%;
 }
 
-.running-where-carousel img,
-.running-carousel img{
+.running-carousel .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
+.running-carousel .carousel-control{
+    background: transparent;
+}
 
 .running-carousel-caption{
     position: absolute;
@@ -249,12 +258,15 @@
         flex: 1 1 100%;
     }
 
-    .running-carousel-caption{
-        bottom: 12%;
+    .running-where-carousel{
+        height: 260px;
     }
 
-    .running-where-carousel,
     .running-carousel{
-        height: 260px;
+        height: 160px;
+    }
+
+    .running-carousel-caption{
+        bottom: 12%;
     }
 }
