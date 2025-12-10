@@ -225,7 +225,7 @@
 .running-carousel-caption{
     position: absolute;
     left: 50%;
-    bottom: 50%;
+    bottom: 30%;
     transform: translateX(-50%);
     text-align: center;
 }
