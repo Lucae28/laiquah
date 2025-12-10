@@ -85,6 +85,27 @@
     font-style: normal;
 }
 
+/* ===== VIDEO LEGENDE ===== */
+.video-wrapper{
+    text-align: center;
+}
+
+.video-legend{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #555;
+}
+
+/* Text zwischen Video und Quote */
+.basket-text{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-align: center;
+    margin: 30px auto 40px;
+    max-width: 900px;
+}
+
 /* Responsive */
 @media (max-width: 768px){
     .basket-hero,
