@@ -236,6 +236,51 @@
     margin-bottom: 6px;
 }
 
+/* ================= BOX 4 : MUSIC ================= */
+
+.running-music{
+    padding: 40px 60px;
+}
+
+.running-music-header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.music-icon{
+    font-size: 4rem;
+    flex-shrink: 0;
+}
+
+.music-text h2{
+    margin: 0 0 5px;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.music-text p{
+    margin: 0 0 8px;
+    font-size: 1.6rem;
+}
+
+.music-link{
+    font-size: 1.6rem;
+    text-decoration: underline;
+    color: #000;
+    font-weight: 600;
+}
+
+.running-music-player iframe{
+    width: 100%;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px){
@@ -269,5 +314,19 @@
 
     .running-carousel-caption{
         bottom: 12%;
+    }
+
+    .running-music{
+        padding: 25px 20px;
+    }
+
+    .running-music-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .music-icon{
+        font-size: 3.2rem;
     }
 }
