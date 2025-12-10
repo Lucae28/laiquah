@@ -322,8 +322,12 @@
     }
 
     .running-carousel-caption{
-        bottom: 30%;
-    }
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
 
     .running-music{
         padding: 25px 20px;
