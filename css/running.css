@@ -1,3 +1,5 @@
+/* ===== HERO ===== */
+
 .hero{
     max-width: 1200px;
     margin: 20px auto 40px;
@@ -23,10 +25,8 @@
     margin: 0;
 }
 
-/* ===== BOXEN ===== */
 
-.running-box{
-/* ==== CONTAINER ==== */
+.running-box,
 main{
     max-width: 1200px;
     margin: 0 auto 60px;
@@ -34,9 +34,10 @@ main{
     background: transparent;
 }
 
-/* ===== BOX 1 ==== */
+
 
 .running-info,
+.running-where,
 .running-levels{
     background: #ffffff;
     padding: 40px 60px 60px;
@@ -46,7 +47,10 @@ main{
 }
 
 
-.running-layout{
+/* =========================================================
+   BOX 1
+   ========================================================= */
+
 .running-info-layout{
     display: flex;
     flex-wrap: wrap;
@@ -54,47 +58,63 @@ main{
     align-items: center;
 }
 
-.running-image{
 .running-info-image{
     flex: 0 0 45%;
 }
 
-.running-image img{
 .running-info-image img{
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
     border-radius: 10px;
 }
 
-.running-text{
 .running-info-text{
     flex: 1;
     font-size: 1.6rem;
     line-height: 1.8;
 }
 
-.running-stats{
-    margin-top: 25px;
-}
-
-.running-stats-number{
 .running-number{
     font-size: 3rem;
     font-weight: 800;
-    margin: 0 0 10px;
     margin: 25px 0 5px;
 }
 
-.running-stats-caption{
 .running-subtext{
-    font-size: 1.4rem;
-    margin: 0;
     font-size: 1.5rem;
     line-height: 1.6;
+    margin: 0;
 }
 
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.btn-running{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    border-radius: 999px;
+    background: #0ea574;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-running:hover,
+.btn-running:focus{
+    background: #0c825c;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BOX 2
+   ========================================================= */
 
 .running-where-content{
     display: flex;
@@ -106,13 +126,10 @@ main{
 .running-where-text{
     flex: 1;
 }
-/* ===== BOX 2 ===== */
 
 .running-where-text h2{
-.running-levels h2{
     margin-top: 0;
     margin-bottom: 20px;
-    margin-bottom: 25px;
     font-size: 2.2rem;
     color: #0c6b3f;
     font-weight: 800;
@@ -123,6 +140,50 @@ main{
     font-size: 1.6rem;
     line-height: 1.8;
     margin: 0;
+}
+
+.running-where-link{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.running-where-link a{
+    text-decoration: underline;
+    color: inherit;
+}
+
+.running-where-carousel{
+    flex: 0 0 45%;
+}
+
+.running-where-carousel .carousel{
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.running-where-carousel .item img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   BOX 3
+   ========================================================= */
+
+.running-levels h2{
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #0c6b3f;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Timeline */
 .levels-timeline{
     display: flex;
     flex-wrap: wrap;
@@ -130,24 +191,10 @@ main{
     margin-bottom: 40px;
 }
 
-/* Button */
-.btn-running{
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 40px;
-    border-radius: 999px;
-    background: #0ea574;
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
 .level{
     flex: 1 1 220px;
 }
 
-.btn-running:hover,
-.btn-running:focus{
-    background: #0c825c;
-    color: #ffffff;
 .level-header{
     display: flex;
     align-items: center;
@@ -155,10 +202,6 @@ main{
     margin-bottom: 8px;
 }
 
-.running-where-link{
-    margin-top: 15px;
-    font-size: 1.5rem;
-    font-style: italic;
 .level-dot{
     width: 26px;
     height: 26px;
@@ -166,16 +209,10 @@ main{
     background: #0ea574;
 }
 
-.running-where-link a{
-    text-decoration: underline;
-    color: inherit;
 .level-title{
     font-weight: 700;
 }
 
-
-.running-where-carousel{
-    flex: 0 0 45%;
 .level ul{
     margin: 0;
     padding-left: 18px;
@@ -183,17 +220,10 @@ main{
     line-height: 1.6;
 }
 
-.running-where-carousel .carousel{
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-/* ===== CAROUSEL ===== */
-
 .running-carousel{
     position: relative;
 }
 
-.running-where-carousel img{
 .running-carousel .item img{
     width: 100%;
     height: auto;
@@ -219,48 +249,28 @@ main{
     margin-bottom: 6px;
 }
 
-/* ===== RESPONSIVE ===== */
-.btn-running{
-    background: #0ea574;
-    border: none;
-    border-radius: 999px;
-    padding: 12px 40px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-running:hover,
-.btn-running:focus{
-    background: #0c825c;
-    color: #ffffff;
-}
 
 /* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px){
 
-    .hero,
-    .running-box{
     .hero{
         padding: 25px 20px 30px;
     }
 
-    .running-layout,
-    .running-where-content{
     .running-info,
+    .running-where,
     .running-levels{
         padding: 25px 20px 30px;
     }
 
-    .running-info-layout{
+    .running-info-layout,
+    .running-where-content{
         flex-direction: column;
     }
 
-    .running-image,
+    .running-info-image,
     .running-where-carousel{
-    .running-info-image{
         flex: 1 1 100%;
     }
 
