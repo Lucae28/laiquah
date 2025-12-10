@@ -313,6 +313,14 @@
         height: 160px;
     }
 
+    .running-carousel .item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    }
+
     .running-carousel-caption{
         bottom: 30%;
     }
