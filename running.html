@@ -38,58 +38,94 @@
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Running à Paris : où courir et progresser selon son niveau</h1>
+        <h1>Running à Paris : où courir et progresser selon on niveau</h1>
         <p>
-            Paris, capitale de la mode, s’est plutôt transformée en capitale du running ces dernières années.
-            Courir près de la Tour Eiffel, sur les quais ou dans les jardins, chacun peut trouver un parcours
-            adapté à son rythme. Débutant ou coureur confirmé, vous trouverez des itinéraires adaptés
-            pour courir en fonction de votre niveau.
+            De la Tour Eiffel aux quais de Seine, courir en plein air à Paris offre un cadre idyllique pour tous les niveaux.
+            Découvrez des parcours variés, que vous soyez débutant, joggeur régulier ou marathonien en préparation.
         </p>
     </section>
-
-    <main>
 
     <!-- BOX 1 -->
-    <section class="content-box running-intro">
+    <section class="running-box running-paris">
+        <div class="running-layout">
+            <div class="running-image">
+                <img src="image/L-L.jpg" alt="Personnes qui courent à Paris">
+            </div>
 
-        <!-- PIC -->
-        <div class="running-image">
-            <img src="image/L-L.jpg" alt="Running à Paris">
-        </div>
-    
-        <!-- TEXT -->
-        <div class="running-text">
-            <p>
-                Paris, capitale de la mode, s’est plutôt transformée en capitale du running ces
-                dernières années. Courir près de la Tour Eiffel, sur les quais ou dans les
-                jardins, chacun peut trouver un parcours adapté à son rythme.
-                Débutant ou coureur confirmé, vous trouverez des itinéraires adaptés pour
-                courir en fonction de votre niveau.
-            </p>
-    
-            <div class="running-stat">
-                <span class="running-number">+ 56 000</span>
-                <p class="running-source">
-                    coureurs inscrits au marathon de Paris en 2025<br>
-                    Source : marathon.com
+            <div class="running-text">
+                <p>
+                    Paris, capitale de la mode, s’est plutôt transformée en capitale du running ces dernières années.
+                    Courir près de la Tour Eiffel, sur les quais ou dans les jardins, chacun peut trouver un parcours
+                    adapté à son rythme. Débutant ou coureur confirmé, vous trouverez des itinéraires adaptés pour courir
+                    en fonction de votre niveau.
                 </p>
+
+                <div class="running-stats">
+                    <p class="running-stats-number">+ 56&nbsp;000</p>
+                    <p class="running-stats-caption">
+                        coureurs inscrits au marathon de Paris en 2025<br>
+                        Source&nbsp;: marathon.com
+                    </p>
+                </div>
             </div>
         </div>
-    
     </section>
 
-    <!-- BOX 2 -->
-    <section class="content-box">
-        <h2>Un sport accessible à tous</h2>
-        <p>
-            Le running est une activité simple, économique et accessible à tous.
-            Que vous débutiez ou que vous cherchiez à améliorer vos performances,
-            courir régulièrement permet de progresser tout en découvrant la ville
-            sous un autre angle.
-        </p>
-    </section>
+    <!-- BOX 2-->
+    <section class="running-box running-where">
+        <div class="running-where-content">
 
-</main>
+            <!-- BUTTON -->
+            <div class="running-where-text">
+                <h2>Où courir à Paris ?</h2>
+                <p>
+                    Sur le site de la Ville de Paris, retrouvez un dossier complet
+                    référençant les meilleurs lieux pour pratiquer la course à pied :
+                    parcs, bois, quais, stades ouverts, etc.
+                </p>
+
+                <a href="#" class="btn-running">Je me renseigne</a>
+
+                <p class="running-where-link">
+                    <a href="#">The link for the button</a>
+                </p>
+            </div>
+
+            <!-- CARROUSEL -->
+            <div class="running-where-carousel">
+                <div id="runningCarousel" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicateurs -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#runningCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#runningCarousel" data-slide-to="1"></li>
+                        <li data-target="#runningCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="image/running1.jpg" alt="Course à pied à Paris 1">
+                        </div>
+                        <div class="item">
+                            <img src="image/running2.jpg" alt="Course à pied à Paris 2">
+                        </div>
+                        <div class="item">
+                            <img src="image/running3.jpg" alt="Course à pied à Paris 3">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#runningCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#runningCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <div id="footer"></div>
