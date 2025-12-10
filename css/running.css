@@ -53,6 +53,54 @@ main p{
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* ===== RUNNING INTRO BOX ===== */
+.running-intro{
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Bild links */
+.running-image{
+    flex: 0 0 45%;
+}
+
+.running-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Text rechts */
+.running-text{
+    flex: 1;
+}
+
+.running-text p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Statistik */
+.running-stat{
+    margin-top: 10px;
+}
+
+.running-number{
+    display: block;
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.running-source{
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.6;
+}
+
 
 @media (max-width: 768px){
 
@@ -63,5 +111,18 @@ main p{
     .hero,
     main{
         padding: 25px 20px 30px;
+    }
+
+    running-intro{
+        flex-direction: column;
+    }
+
+    .running-image,
+    .running-text{
+        flex: 1;
+    }
+
+    .running-number{
+        font-size: 3.2rem;
     }
 }
