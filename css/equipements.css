@@ -72,21 +72,27 @@ main p{
 
 /* ===== QUOTE ===== */
 
+/* ===== QUOTE-CONTAINER ===== */
 .content{
     max-width: 1200px;
-    margin: 0 auto 60px;
-    padding: 0;
+    margin: 60px auto;        /* oben UND unten gleich viel Platz */
+    padding: 40px 0;          /* innen oben/unten gleicher Abstand */
     background: transparent;
     box-shadow: none;
     border-radius: 0;
     text-align: center;
+
+    display: flex;            /* Zitat in der Mitte des Bereichs zentrieren */
+    justify-content: center;
+    align-items: center;
 }
 
+/* ===== QUOTE ===== */
 .quote{
     font-style: italic;
     border-left: 4px solid #0ea574;
     padding: 28px 28px;
-    margin: 0 auto 40px;
+    margin: 0;
     background: #f9f9f9;
     color: #222;
     max-width: 800px;
