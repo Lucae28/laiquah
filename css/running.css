@@ -1,4 +1,4 @@
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 
 .hero{
     max-width: 1200px;
@@ -25,77 +25,92 @@
     margin: 0;
 }
 
+/* ================= BOXEN ================= */
 
 .running-box,
-main{
-    max-width: 1200px;
-    margin: 0 auto 60px;
-    padding: 0;
-    background: transparent;
-}
-
-
-
-.running-info,
-.running-where,
 .running-levels{
+    max-width: 1200px;
+    margin: 0 auto 40px;
     background: #ffffff;
     padding: 40px 60px 60px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
 }
 
+/* ================= BOX 1 ================= */
 
-/* =========================================================
-   BOX 1
-   ========================================================= */
-
-.running-info-layout{
+.running-layout{
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
 }
 
-.running-info-image{
+.running-image{
     flex: 0 0 45%;
 }
 
-.running-info-image img{
+.running-image img{
     width: 100%;
     height: auto;
     display: block;
     border-radius: 10px;
 }
 
-.running-info-text{
+.running-text{
     flex: 1;
     font-size: 1.6rem;
     line-height: 1.8;
 }
 
-.running-number{
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 25px 0 5px;
+.running-stats{
+    margin-top: 25px;
 }
 
-.running-subtext{
+.running-stats-number{
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 10px;
+}
+
+.running-stats-caption{
     font-size: 1.5rem;
     line-height: 1.6;
     margin: 0;
 }
 
+/* ================= BOX 2 ================= */
 
-/* =========================================================
-   BUTTON
-   ========================================================= */
+.running-where-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.running-where-text{
+    flex: 1;
+}
+
+.running-where-text h2{
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #0c6b3f;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.running-where-text p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin: 0;
+}
 
 .btn-running{
     display: inline-block;
     margin-top: 30px;
-    padding: 15px 40px;
+    padding: 12px 40px;
     border-radius: 999px;
     background: #0ea574;
     color: #ffffff;
@@ -111,68 +126,23 @@ main{
     color: #ffffff;
 }
 
-
-/* =========================================================
-   BOX 2
-   ========================================================= */
-
-.running-where-content{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-}
-
-.running-where-text{
-    flex: 1;
-}
-
-.running-where-text h2{
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-    color: #0c6b3f;
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.running-where-text p{
-    font-size: 1.6rem;
-    line-height: 1.8;
-    margin: 0;
-}
-
-.running-where-link{
-    margin-top: 15px;
-    font-size: 1.5rem;
-    font-style: italic;
-}
-
-.running-where-link a{
-    text-decoration: underline;
-    color: inherit;
-}
-
 .running-where-carousel{
     flex: 0 0 45%;
 }
 
 .running-where-carousel .carousel{
-    border-radius: 16px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
-.running-where-carousel .item img{
+.running-where-carousel img{
     width: 100%;
     height: auto;
     display: block;
 }
 
-
-/* =========================================================
-   BOX 3
-   ========================================================= */
+/* ================= BOX 3 ================= */
 
 .running-levels h2{
     margin-top: 0;
@@ -183,7 +153,6 @@ main{
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Timeline */
 .levels-timeline{
     display: flex;
     flex-wrap: wrap;
@@ -220,8 +189,10 @@ main{
     line-height: 1.6;
 }
 
+
 .running-carousel{
     position: relative;
+    margin-top: 20px;
 }
 
 .running-carousel .item img{
@@ -249,8 +220,7 @@ main{
     margin-bottom: 6px;
 }
 
-
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px){
 
@@ -258,18 +228,17 @@ main{
         padding: 25px 20px 30px;
     }
 
-    .running-info,
-    .running-where,
+    .running-box,
     .running-levels{
         padding: 25px 20px 30px;
     }
 
-    .running-info-layout,
+    .running-layout,
     .running-where-content{
         flex-direction: column;
     }
 
-    .running-info-image,
+    .running-image,
     .running-where-carousel{
         flex: 1 1 100%;
     }
