@@ -70,6 +70,34 @@ main p{
     text-align: center;
 }
 
+/* ===== QUOTE ===== */
+
+.quote{
+    font-style: italic;
+    border-left: 4px solid #0ea574;
+    padding: 18px 24px;
+    margin: 30px auto 40px;
+    background: #f9f9f9;
+    color: #222;
+    max-width: 800px;
+
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.quote p{
+    font-size: 1.8rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.quote footer{
+    margin-top: 10px;
+    font-weight: 700;
+    font-style: normal;
+    color: #555;
+}
+
 
 @media (max-width: 768px){
 
