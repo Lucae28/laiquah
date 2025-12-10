@@ -23,97 +23,73 @@
     margin: 0;
 }
 
-main{
 /* ===== BOXEN ===== */
 
 .running-box{
+/* ==== CONTAINER ==== */
+main{
     max-width: 1200px;
     margin: 0 auto 60px;
     padding: 0;
     background: transparent;
 }
 
-main h2{
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-    color: #0c6b3f;
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-}
+/* ===== BOX 1 ==== */
 
-main p{
-    font-size: 1.6rem;
-    line-height: 1.8;
-}
-
-/* ===== CONTENT BOXES ===== */
-.content-box{
-    margin-top: 40px;
-    padding: 40px 60px;
+.running-info,
+.running-levels{
     background: #ffffff;
     padding: 40px 60px 60px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
 }
 
-/* ===== RUNNING INTRO BOX ===== */
-.running-intro{
 
 .running-layout{
+.running-info-layout{
     display: flex;
-    gap: 50px;
-    align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
 }
 
-/* Bild links */
 .running-image{
+.running-info-image{
     flex: 0 0 45%;
 }
 
 .running-image img{
+.running-info-image img{
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px;
     border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Text rechts */
 .running-text{
+.running-info-text{
     flex: 1;
-}
-
-.running-text p{
     font-size: 1.6rem;
     line-height: 1.8;
-    margin-bottom: 30px;
 }
 
-/* Statistik */
-.running-stat{
-    margin-top: 10px;
 .running-stats{
     margin-top: 25px;
 }
 
-.running-number{
-    display: block;
-    font-size: 4.2rem;
 .running-stats-number{
+.running-number{
     font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 10px;
     margin: 0 0 10px;
+    margin: 25px 0 5px;
 }
 
-.running-source{
-    font-size: 1.4rem;
-    color: #333;
 .running-stats-caption{
+.running-subtext{
+    font-size: 1.4rem;
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -130,10 +106,13 @@ main p{
 .running-where-text{
     flex: 1;
 }
+/* ===== BOX 2 ===== */
 
 .running-where-text h2{
+.running-levels h2{
     margin-top: 0;
     margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 2.2rem;
     color: #0c6b3f;
     font-weight: 800;
@@ -144,6 +123,11 @@ main p{
     font-size: 1.6rem;
     line-height: 1.8;
     margin: 0;
+.levels-timeline{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 /* Button */
@@ -156,6 +140,96 @@ main p{
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
+.level{
+    flex: 1 1 220px;
+}
+
+.btn-running:hover,
+.btn-running:focus{
+    background: #0c825c;
+    color: #ffffff;
+.level-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.running-where-link{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-style: italic;
+.level-dot{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #0ea574;
+}
+
+.running-where-link a{
+    text-decoration: underline;
+    color: inherit;
+.level-title{
+    font-weight: 700;
+}
+
+
+.running-where-carousel{
+    flex: 0 0 45%;
+.level ul{
+    margin: 0;
+    padding-left: 18px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.running-where-carousel .carousel{
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+/* ===== CAROUSEL ===== */
+
+.running-carousel{
+    position: relative;
+}
+
+.running-where-carousel img{
+.running-carousel .item img{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.running-carousel .carousel-control{
+    background: transparent;
+}
+
+.running-carousel-caption{
+    position: absolute;
+    left: 50%;
+    bottom: 18%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.running-carousel-label{
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+/* ===== RESPONSIVE ===== */
+.btn-running{
+    background: #0ea574;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 40px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-running:hover,
@@ -164,62 +238,33 @@ main p{
     color: #ffffff;
 }
 
-.running-where-link{
-    margin-top: 15px;
-    font-size: 1.5rem;
-    font-style: italic;
-}
-
-.running-where-link a{
-    text-decoration: underline;
-    color: inherit;
-}
-
-
-.running-where-carousel{
-    flex: 0 0 45%;
-}
-
-.running-where-carousel .carousel{
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-}
-
-.running-where-carousel img{
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* ===== RESPONSIVE ===== */
-
 @media (max-width: 768px){
 
-    .content-box{
-        padding: 25px 20px 30px;
-    }
-    
     .hero,
-    main{
     .running-box{
+    .hero{
         padding: 25px 20px 30px;
     }
 
-    running-intro{
     .running-layout,
     .running-where-content{
+    .running-info,
+    .running-levels{
+        padding: 25px 20px 30px;
+    }
+
+    .running-info-layout{
         flex-direction: column;
     }
 
     .running-image,
-    .running-text{
-        flex: 1;
+    .running-where-carousel{
+    .running-info-image{
+        flex: 1 1 100%;
     }
 
-    .running-number{
-        font-size: 3.2rem;
-    .running-where-carousel{
-        flex: 1 1 100%;
+    .running-carousel-caption{
+        bottom: 12%;
     }
 }
