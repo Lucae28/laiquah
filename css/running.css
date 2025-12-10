@@ -223,9 +223,12 @@
 }
 
 
-.running-where-carousel,
-.running-carousel{
+.running-where-carousel{
     height: 340px;
+}
+
+.running-carousel{
+    height: 220px;
 }
 
 .running-where-carousel .item,
