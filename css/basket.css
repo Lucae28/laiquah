@@ -59,7 +59,7 @@
 }
 
 .video-wrapper{
-    margin-top: 30px;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
