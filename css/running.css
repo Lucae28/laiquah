@@ -220,6 +220,25 @@
     margin-bottom: 6px;
 }
 
+
+.running-where-carousel,
+.running-carousel{
+    height: 340px;
+}
+
+.running-where-carousel .item,
+.running-carousel .item{
+    height: 100%;
+}
+
+.running-where-carousel img,
+.running-carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px){
