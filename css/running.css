@@ -200,7 +200,7 @@
 .running-carousel{
     position: relative;
     margin-top: 20px;
-    height: 600px;
+    height: 300px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
