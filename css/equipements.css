@@ -91,7 +91,7 @@ main p{
 .quote{
     font-style: italic;
     border-left: 4px solid #0ea574;
-    padding: 28px 28px;
+    padding: 28px 28px 28px 32px;
     margin: 0;
     background: #f9f9f9;
     color: #222;
