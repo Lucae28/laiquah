@@ -128,6 +128,7 @@
 
 .running-where-carousel{
     flex: 0 0 45%;
+    height: 340px;
 }
 
 .running-where-carousel .carousel{
@@ -193,6 +194,7 @@
 .running-carousel{
     position: relative;
     margin-top: 20px;
+    height: 220px;
 }
 
 .running-carousel .item img{
