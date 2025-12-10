@@ -70,19 +70,17 @@ main p{
     text-align: center;
 }
 
-/* ===== QUOTE ===== */
 
-/* ===== QUOTE-CONTAINER ===== */
 .content{
-    max-width: 1200px;
-    margin: 60px auto;        /* oben UND unten gleich viel Platz */
-    padding: 40px 0;          /* innen oben/unten gleicher Abstand */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
     background: transparent;
     box-shadow: none;
     border-radius: 0;
     text-align: center;
 
-    display: flex;            /* Zitat in der Mitte des Bereichs zentrieren */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -96,6 +94,7 @@ main p{
     background: #f9f9f9;
     color: #222;
     max-width: 800px;
+    width: 100%;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
