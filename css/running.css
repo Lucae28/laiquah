@@ -44,8 +44,22 @@ main p{
     line-height: 1.8;
 }
 
+/* ===== CONTENT BOXES ===== */
+.content-box{
+    margin-top: 40px;
+    padding: 40px 60px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
 @media (max-width: 768px){
 
+    .content-box{
+        padding: 25px 20px 30px;
+    }
+    
     .hero,
     main{
         padding: 25px 20px 30px;
