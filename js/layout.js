@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Navbar einfügen (falls du das so machst)
+    // Navbar
     const navbarContainer = document.getElementById("navbar");
     if (navbarContainer) {
         fetch("navbar.html")
             .then(res => res.text())
             .then(html => {
                 navbarContainer.innerHTML = html;
-                initMobileNav(); // erst NACH dem Einfügen aufrufen
+                initMobileNav();
             })
             .catch(err => console.error("Navbar konnte nicht geladen werden:", err));
     } else {
-        // Falls die Navbar direkt im HTML steht:
+        
         initMobileNav();
     }
 
-    // Footer einfügen
+    // Footer
     const footerContainer = document.getElementById("footer");
     if (footerContainer) {
         fetch("footer.html")
