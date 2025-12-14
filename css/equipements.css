@@ -178,8 +178,8 @@ main p{
 
 .season-buttons{
     display: flex;
-    justify-content: space-between;
-    gap: 60px;
+    justify-content: center;
+    gap: 30px;
 }
 
 .season-item{
