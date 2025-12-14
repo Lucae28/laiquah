@@ -179,13 +179,11 @@ main p{
 
 .selection-froid-item img{
     width: 100%;
-    max-width: 320px;
-    height: auto;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
     display: block;
-    margin: 0 auto;
-    border-radius: 8px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
 }
 
 .selection-froid-item:hover img{
