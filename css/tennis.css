@@ -48,20 +48,13 @@
 
 .tennis-intro figure{
     margin: 30px auto 0;
-    text-align: center;
+    text-align: left;
 }
 
 .tennis-intro img{
     max-width: 100%;
     height: auto;
     border-radius: 6px;
-}
-
-.tennis-intro figcaption{
-    margin-top: 10px;
-    font-size: 1.3rem;
-    font-style: italic;
-    color: #555;
 }
 
 
