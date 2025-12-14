@@ -80,6 +80,17 @@
     margin: 0;
 }
 
+.about-caption {
+    margin: 0;
+}
+
+.about-caption {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #555;
+}
+
 /* ================= BOX 2 ================= */
 
 .running-where-content{
